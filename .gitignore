@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env files
+.env
+.env.*
+.env*.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Large binary assets — transfer via USB, NOT GitHub
+# These are the 81 gallery photos + portrait images
+/public/gallery/
+/public/portrait.jpg
+/public/portrait2.jpg
+/public/portrait-event.jpg
+/public/portrait-park.jpg
+
+# Keep placeholder files
+# (add gallery images manually on new laptop from USB)
