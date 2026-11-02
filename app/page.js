@@ -19,7 +19,7 @@ export default function HomePage() {
         background: 'linear-gradient(160deg, #FAF6F0 0%, #F0E6D3 50%, #E8D5B7 100%)',
         position: 'relative', overflow: 'hidden',
       }}>
-        <div className="container" style={{ position: 'relative', zIndex: 1, paddingRight: 0 }}>
+        <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="hero-grid">
 
             {/* Portrait — mobile: top full-width, desktop: right column */}
@@ -69,7 +69,7 @@ export default function HomePage() {
               </blockquote>
 
               {/* Stats */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, marginBottom: 32 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px 24px', marginBottom: 32 }}>
                 {[
                   { number: '90+', label: tx(t.home.statWorks, lang) },
                   { number: '35+', label: tx(t.home.statAwards, lang) },
@@ -87,9 +87,9 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                <Link href="/biography" className="btn-primary">{tx(t.home.btnBio, lang)}</Link>
-                <Link href="/books" className="btn-outline">{tx(t.home.btnBooks, lang)}</Link>
+              <div style={{ display: 'flex', gap: 10, flexDirection: 'column' }} className="hero-btns">
+                <Link href="/biography" className="btn-primary" style={{ justifyContent: 'center', textAlign: 'center' }}>{tx(t.home.btnBio, lang)}</Link>
+                <Link href="/books" className="btn-outline" style={{ justifyContent: 'center', textAlign: 'center' }}>{tx(t.home.btnBooks, lang)}</Link>
               </div>
             </div>
 

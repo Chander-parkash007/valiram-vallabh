@@ -309,16 +309,15 @@ body::before {
   gap: 0;
 }
 
-/* Portrait: full-width on mobile, fills container, no empty space */
+/* Portrait: full-width on mobile */
 .hero-portrait-col {
   width: 100%;
-  max-height: 70vw;
   overflow: hidden;
 }
 
-/* Text: full-width on mobile, padding */
+/* Text: full-width on mobile with proper padding */
 .hero-text-col {
-  padding: 32px 0 40px;
+  padding: 28px 24px 40px 24px;
 }
 
 /* Tablet and up — side by side */
@@ -330,10 +329,14 @@ body::before {
     min-height: 88vh;
   }
 
+  /* Remove right padding on desktop so portrait reaches edge */
+  .hero-container {
+    padding-right: 0 !important;
+  }
+
   /* Right column — portrait fills full height */
   .hero-portrait-col {
     width: 42%;
-    max-height: none;
     flex-shrink: 0;
     order: 2;
   }
@@ -402,5 +405,19 @@ body::before {
   }
   .btn-primary:hover, .btn-outline:hover, .btn-green:hover {
     transform: none;
+  }
+}
+
+/* Hero buttons — stacked on mobile, side by side on desktop */
+.hero-btns {
+  flex-direction: column !important;
+}
+@media (min-width: 480px) {
+  .hero-btns {
+    flex-direction: row !important;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline {
+    width: auto !important;
   }
 }
