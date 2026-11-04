@@ -590,7 +590,7 @@ export default function PressPage() {
           <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.75, marginBottom: 28 }}>
             {tx(t.press.submitDesc, lang)}
           </p>
-          <a href="mailto:khatriiiranjhi12@gmail.com?subject=Article about Vali Ram Vallabh" className="btn-primary">
+          <a href="mailto:info@valiramvallabh.com?subject=Article about Vali Ram Vallabh" className="btn-primary">
             {tx(t.press.submitBtn, lang)}
           </a>
         </div>

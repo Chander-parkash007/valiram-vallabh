@@ -12,7 +12,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const mailto = `mailto:khatriiiranjhi12@gmail.com?subject=${encodeURIComponent(form.subject || 'Message about Vali Ram Vallabh')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`
+    const mailto = `mailto:info@valiramvallabh.com?subject=${encodeURIComponent(form.subject || 'Message about Vali Ram Vallabh')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`
     window.location.href = mailto
     setStatus('sent')
   }
@@ -142,8 +142,8 @@ export default function ContactPage() {
                     {
                       icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>,
                       label: isSd ? 'ايميل' : 'Email',
-                      value: 'khatriiiranjhi12@gmail.com',
-                      href: 'mailto:khatriiiranjhi12@gmail.com',
+                      value: 'info@valiramvallabh.com',
+                      href: 'mailto:info@valiramvallabh.com',
                       color: 'var(--green)',
                     },
                   ].map((c, i) => (
