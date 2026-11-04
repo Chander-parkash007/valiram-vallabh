@@ -138,7 +138,7 @@ export default function LegacyPage() {
                   { text: isSd ? 'سنڌ ميوزيم، حيدرآباد، سنڌ، پاڪستان' : 'Sindh Museum, Hyderabad, Sindh, Pakistan' },
                   { text: isSd ? 'افتتاح: 13 نومبر' : 'Inaugurated: 13 November' },
                   { text: isSd ? 'مقصد: سندس مسودا، ايوارڊ، ۽ ذاتي مجموعو محفوظ ڪرڻ' : 'Purpose: Preserving his manuscripts, awards, and personal collection' },
-                  { text: isSd ? 'منظم ڪيو: ڊاڪٽر ڪملشور لوهاڻو ۽ خاندان' : 'Organized by: Dr. Kamleshwar Lohana and family' },
+                  { text: isSd ? 'منظم ڪيو: ڊاڪٽر ڪملشور لوهاڻو ۽ خاندان' : 'Organized by: Dr. Kamleshwer Lohana and family' },
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                     <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.5 }}>{item.text}</p>
@@ -180,7 +180,7 @@ export default function LegacyPage() {
               <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 16 }}>
                 {isSd
                   ? <><strong>1 اپريل 1988ع</strong> تي ولي رام ولڀ حيدرآباد جي حسين آباد ۾ بلو اينجلز ايڊن اسڪول قائم ڪيو — ڪنڊرگارٽن کان ڪلاس 8 تائين معياري تعليم فراهم ڪئي. اسڪول سندس ننگهه <strong>انيتا ڪملشور</strong> جي اڳواڻي ۾ جاري آهي.</>
-                  : <>On <strong>1 April 1988</strong>, Vali Ram Vallabh founded Blue Angels Eden School in Hussainabad, Hyderabad — providing quality education from Kindergarten to Class 8. The school continues to operate, led by his daughter-in-law <strong>Anita Kamleshwar</strong> as Principal.</>
+                  : <>On <strong>1 April 1988</strong>, Vali Ram Vallabh founded Blue Angels Eden School in Hussainabad, Hyderabad — providing quality education from Kindergarten to Class 8. The school continues to operate, led by his daughter-in-law <strong>Anita Kamleshwer</strong> as Principal.</>
                 }
               </p>
               <div style={{ padding: '12px 16px', background: 'rgba(139,58,42,0.06)', borderRadius: 10, border: '1px solid rgba(139,58,42,0.15)' }}>

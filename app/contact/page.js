@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { useLanguage } from '@/components/LanguageContext'
@@ -169,7 +169,7 @@ export default function ContactPage() {
                 <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.contact.familyTag, lang)}</div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {[
-                    { name: 'Dr. Kamleshwar Lohana', role: isSd ? 'پٽ' : 'Son', note: isSd ? 'اسسٽنٽ پروفيسر، مهران يونيورسٽي' : 'Asst. Professor, Mehran University' },
+                    { name: 'Dr. Kamleshwer Lohana', role: isSd ? 'پٽ' : 'Son', note: isSd ? 'ايسوسيئيٽ پروفيسر، مهران يونيورسٽي' : 'Associate Professor, Mehran University' },
                     { name: 'Dr. Pushpa Vallabh',    role: isSd ? 'ڌيءَ' : 'Daughter', note: isSd ? 'ايسوسيئيٽ پروفيسر، ڊائو ميڊيڪل يونيورسٽي' : 'Associate Professor, Dow Medical University' },
                     { name: 'Gauri Vallabh',         role: isSd ? 'ڌيءَ' : 'Daughter', note: isSd ? 'اسسٽنٽ پروفيسر، گورنمينٽ ويمنس ڪاليج' : "Asst. Professor, Govt Women's College, Karachi" },
                   ].map((f, i) => (

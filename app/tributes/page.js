@@ -49,17 +49,11 @@ export default function TributesPage() {
                 borderLeft: `4px solid ${i % 2 === 0 ? 'var(--terracotta)' : 'var(--gold)'}`,
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 20 }}>
-                  {tribute.relationEn === 'Son' ? (
-                    <div style={{ width: 52, height: 52, borderRadius: '50%', flexShrink: 0, overflow: 'hidden', border: '2px solid var(--gold)' }}>
-                      <img src="/gallery/kamleshwar standing beside valiram park board.jpg" alt="Dr. Kamleshwar Lohana" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
-                    </div>
-                  ) : (
-                    <div style={{ width: 52, height: 52, borderRadius: '50%', flexShrink: 0, background: i % 2 === 0 ? 'rgba(139,58,42,0.08)' : 'rgba(201,148,58,0.08)', border: `1px solid ${i % 2 === 0 ? 'rgba(139,58,42,0.2)' : 'rgba(201,148,58,0.2)'}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-                      </svg>
-                    </div>
-                  )}
+                  <div style={{ width: 52, height: 52, borderRadius: '50%', flexShrink: 0, background: i % 2 === 0 ? 'rgba(139,58,42,0.08)' : 'rgba(201,148,58,0.08)', border: `1px solid ${i % 2 === 0 ? 'rgba(139,58,42,0.2)' : 'rgba(201,148,58,0.2)'}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
                   <div>
                     <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 2 }}>
                       {tribute.authorEn}

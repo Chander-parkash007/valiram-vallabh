@@ -22,15 +22,15 @@ export default function HomePage() {
         <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="hero-grid">
 
-            {/* Portrait — mobile: top full-width, desktop: right column */}
+            {/* Portrait */}
             <div className="hero-portrait-col">
-              <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4', borderRadius: 20, overflow: 'hidden', boxShadow: '0 24px 64px rgba(139,58,42,0.22)' }}>
+              <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: 420, background: '#EAD8BC' }}>
                 <Image
-                  src="/gallery/valiram potrait 1.jpeg"
+                  src="/gallery/valiram_potrait_1_1_cropped.jpg"
                   alt="Vali Ram Vallabh — Watercolour Portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 440px"
-                  style={{ objectFit: 'cover', objectPosition: '50% 8%' }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
                   priority
                 />
               </div>

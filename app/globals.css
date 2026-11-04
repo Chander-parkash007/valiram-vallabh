@@ -326,7 +326,7 @@ body::before {
     flex-direction: row;
     align-items: stretch;
     gap: 0;
-    min-height: 88vh;
+    min-height: 75vh;
   }
 
   /* Remove right padding on desktop so portrait reaches edge */
@@ -334,16 +334,22 @@ body::before {
     padding-right: 0 !important;
   }
 
-  /* Right column — portrait fills full height */
+  /* Right column — portrait */
   .hero-portrait-col {
-    width: 42%;
+    width: 50%;
     flex-shrink: 0;
     order: 2;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAD8BC;
+    overflow: hidden;
   }
 
   .hero-portrait-col > div {
     height: 100% !important;
-    min-height: 520px;
+    aspect-ratio: unset !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     border: none !important;

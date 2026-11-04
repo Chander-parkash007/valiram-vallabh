@@ -16,7 +16,7 @@ const pressItems = [
     language: 'English',
     type: 'Anniversary Notice',
     publicationUrl: 'https://www.dawn.com/news/1784850',
-    description: 'Death anniversary notice published in Dawn newspaper. "As long as stories are told and thoughts take flight, your legacy will live on in every heart you touched." Announced the second Vali Ram Vallabh Memorial Lecture — Sindhi Language and the Art of Translation — on 15 November 2025 at Press Club Mithi, Tharparkar. Signed by Mrs. Hari Vallabh (Wife), Dr. Kamleshwar Lohana (Son), Dr. Pushpa Vallabh (Daughter), Gauri Vallabh (Daughter), grandchildren and family.',
+    description: 'Death anniversary notice published in Dawn newspaper. "As long as stories are told and thoughts take flight, your legacy will live on in every heart you touched." Announced the second Vali Ram Vallabh Memorial Lecture — Sindhi Language and the Art of Translation — on 15 November 2025 at Press Club Mithi, Tharparkar. Signed by Mrs. Hari Vallabh (Wife), Dr. Kamleshwer Lohana (Son), Dr. Pushpa Vallabh (Daughter), Gauri Vallabh (Daughter), grandchildren and family.',
     featured: true,
   },
   {
@@ -29,8 +29,8 @@ const pressItems = [
     language: 'Sindhi',
     type: 'Tribute Article',
     publicationUrl: null,
-    author: 'Dr. Kamleshwar Lohana',
-    description: 'Written by his son Dr. Kamleshwar Lohana on the 2nd death anniversary. Describes Vali Ram Vallabh\'s lifelong devotion to Sindhi language and literature — his translations, his role at Sindhology, his founding of Blue Angels Eden School, and the personal memories of a son who grew up surrounded by books. His translation "Dhariyo" (The Outsider by Albert Camus) is cited as a landmark work.',
+    author: 'Dr. Kamleshwer Lohana',
+    description: 'Written by his son Dr. Kamleshwer Lohana on the 2nd death anniversary. Describes Vali Ram Vallabh\'s lifelong devotion to Sindhi language and literature — his translations, his role at Sindhology, his founding of Blue Angels Eden School, and the personal memories of a son who grew up surrounded by books. His translation "Dhariyo" (The Outsider by Albert Camus) is cited as a landmark work.',
     featured: true,
   },
   {
@@ -43,8 +43,8 @@ const pressItems = [
     language: 'Sindhi',
     type: 'Tribute Article',
     publicationUrl: null,
-    author: 'Dr. Kamleshwar Lohana',
-    description: 'Published on the 3rd death anniversary. Dr. Kamleshwar Lohana writes a deeply personal tribute — describing the journey of memories, the annual memorial lecture series, the Vali Ram Vallabh Literary Society\'s work, and the ongoing effort to preserve his father\'s legacy through publications, conferences, and the Memorial Corner at Sindh Central Auditorium. Mentions his translations of Mahmoud Darwish, Albert Camus, Krishan Chander, and others.',
+    author: 'Dr. Kamleshwer Lohana',
+    description: 'Published on the 3rd death anniversary. Dr. Kamleshwer Lohana writes a deeply personal tribute — describing the journey of memories, the annual memorial lecture series, the Vali Ram Vallabh Literary Society\'s work, and the ongoing effort to preserve his father\'s legacy through publications, conferences, and the Memorial Corner at Sindh Central Auditorium. Mentions his translations of Mahmoud Darwish, Albert Camus, Krishan Chander, and others.',
     featured: true,
   },
   {
@@ -71,7 +71,7 @@ const pressItems = [
     language: 'Sindhi',
     type: 'Legacy',
     publicationUrl: null,
-    description: 'Dr. Kamleshwar Lohana (son) standing beside the Vali Ram Vallabh Park board — a public park named in honour of Vali Ram Vallabh by the Sindhi Adabi Board and the Government of Sindh. The board displays the Sindhi Adabi Board flag, the map of Sindh, and the Government of Sindh seal.',
+    description: 'Dr. Kamleshwer Lohana (son) standing beside the Vali Ram Vallabh Park board — a public park named in honour of Vali Ram Vallabh by the Sindhi Adabi Board and the Government of Sindh. The board displays the Sindhi Adabi Board flag, the map of Sindh, and the Government of Sindh seal.',
     featured: true,
   },
   {
@@ -98,6 +98,59 @@ const pressItems = [
     type: 'Magazine Feature',
     publicationUrl: null,
     description: 'Two-page feature (pp. 28–29) in Affair magazine on a literary gathering held in honour of Vali Ram Vallabh. Scholar Dilip Kothari presented a paper covering more than 40 books. Speakers included Dr. Manoj Kumar, Shankar Sagar, Dr. Anton Raaz, and Hamesh Kemani (Secretary, Sindhi Adabi). The gathering featured readings from his translations and discussions of his contribution to world literature in Sindhi.',
+    featured: false,
+  },
+  {
+    id: 8,
+    image: '/press/Daily Dawn, a profile article on my father\'s (Vali Ram Vallabh) literary work by Zubaida Mustafa.jpeg',
+    titleEn: 'Daily Dawn — Profile by Zubaida Mustafa',
+    titleSd: 'ڊيلي ڊان — ادبي پروفائيل',
+    publication: 'Dawn',
+    date: '2023',
+    language: 'English',
+    type: 'Profile Article',
+    publicationUrl: null,
+    author: 'Zubaida Mustafa',
+    description: 'A profile article in Daily Dawn on the literary work of Vali Ram Vallabh, written by renowned journalist Zubaida Mustafa. Covers his translations, his role in bringing world literature to Sindhi readers, and his lasting contribution to Sindhi literary culture.',
+    featured: true,
+  },
+  {
+    id: 9,
+    image: '/press/Dawn article.jpeg',
+    titleEn: 'Dawn — Literary Coverage',
+    titleSd: 'ڊان اخبار — ادبي ڪوريج',
+    publication: 'Dawn',
+    date: '2023',
+    language: 'English',
+    type: 'Literary Coverage',
+    publicationUrl: null,
+    description: 'Dawn newspaper coverage of Vali Ram Vallabh and his literary contributions to Sindhi language and literature.',
+    featured: false,
+  },
+  {
+    id: 10,
+    image: '/press/WhatsApp Image 2026-11-04 at 8.56.29 AM.jpeg',
+    titleEn: 'Press Coverage — Literary Gathering',
+    titleSd: 'پريس ڪوريج — ادبي محفل',
+    publication: 'Sindhi Press',
+    date: 'November 2026',
+    language: 'Sindhi',
+    type: 'Event Coverage',
+    publicationUrl: null,
+    description: 'Press coverage of a literary gathering held in memory of Vali Ram Vallabh.',
+    featured: false,
+  },
+  {
+    id: 11,
+    image: null,
+    titleEn: 'Vali Ram Vallabh — An Epoch-Making Litterateur',
+    titleSd: 'ولي رام ولڀ — ايھد ساز اديب',
+    publication: 'Express.pk',
+    date: '2023',
+    language: 'Urdu',
+    type: 'Profile Article',
+    publicationUrl: 'https://www.express.pk/story/2742353/walii-raam-walibh-ehad-saaz-adeeb-2742353',
+    description: 'A detailed profile article on Express.pk about Vali Ram Vallabh — describing him as an epoch-making litterateur who transformed Sindhi literature through his translations and literary scholarship.',
     featured: false,
   },
 ]
@@ -158,6 +211,13 @@ const sindhiCards = [
     titleEn: 'Saeed Mangi — Institute of Sindhology',
     textSd: 'وليرام ولڀ سنڌي ادب جو اهو منفرد شخص آهي جنهن پنهنجو غير معمولي حصو مڪمل خاموشيءَ سان ادا ڪيو ۽ سنڌي ادب ۾ پنهنجي نالي جا اَمٽ نقش ڇڏيا۔ هو هڪ ٻوليءَ جو ماهر هو — جنهن به ڪتاب تي هٿ وڌو، اهو وڌيڪ بهتر ٿي ويو۔',
     source: 'سعيد منگي — ساٿي، انسٽيٽيوٽ آف سنڌالاجي',
+    type: 'prose',
+  },
+  {
+    id: 'sd-9',
+    titleEn: 'Dr. Murli Dhar — A Personal Memory',
+    textSd: 'سائين ولي رام ولڀ ڪتابن ۾ پڙھيا ويندا\n\nمنھنجي ڄاڻ سڃاڻ سائين ولي رام ولڀ سان ان وقت ٿي جڏھن مون ء منھنجي ڪجھ دوستن چانڊڪا ميڊيڪل ڪاليج مان ڏياري نالي ھڪ ميگزين ڇپي. اھا ۱۹۸۳ جي ڳالھ آھي. ميگزين طارق اشرف جي سھڻي مان ڇپرائي. سائين جو گھر طارق اشرف جي پريس جي ويجھو ھيو. اسين سائين کي پروف پڙھڻ لاء چيو. انھن ڏاڍي خوشي سان اسان جي ڳالھ رکي ء اسان کي ڪيتريون ھي چڱيون صلاحون به ڏنائون.\n\nاڳتي ھلي پشپا ولڀ سان واسطو پيو، ملاقات ٿي، ائين اسان رشتيدار ٿي وياسون ء سائين ولي رام ولڀ مان بابا ولي رام ولڀ ٿي ويا. انھن جا ڪتاب ء لائبريري ڏاڍا وڻندا ھيا. جڏھن به مان گھر ويندو ھيس انھن جي لائبريري ۾ ضرور ويندو ھيس ء نوان ڪتاب گولھيندو ھيس. ھو اڪثر ڪون ڪو ڪتاب مونکي پڙھڻ لاء ڏئي ڇڏيندا ھيا.\n\nھو ھميشه ياد رکيا ويندا. لکيل ڪتابن ۾ پڙھيا ويندا. ھو اسان سان گڏ آھن، گڏ رھندا. انھن ڪتاب لکيا، رشتا جوڙيا، دليون کٽيون — ھو آھن، ھو رھندا.',
+    source: 'ڊاڪٽر مرلي ڌر',
     type: 'prose',
   },
 ]
@@ -335,21 +395,34 @@ export default function PressPage() {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
                 {rest.map(item => (
                   <div key={item.id} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-                    <div
-                      onClick={() => setLightbox(item)}
-                      style={{ position: 'relative', width: '100%', aspectRatio: '4/3', cursor: 'zoom-in', flexShrink: 0, background: 'var(--bg-elevated)', overflow: 'hidden' }}
-                    >
-                      <Image src={item.image} alt={item.titleEn} fill sizes="400px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(44,24,16,0.6), transparent 50%)', pointerEvents: 'none' }} />
-                      <div style={{ position: 'absolute', top: 10, right: 10 }}>
-                        <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5ECD7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
-                            <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
-                          </svg>
+                    {item.image ? (
+                      <div
+                        onClick={() => setLightbox(item)}
+                        style={{ position: 'relative', width: '100%', aspectRatio: '4/3', cursor: 'zoom-in', flexShrink: 0, background: 'var(--bg-elevated)', overflow: 'hidden' }}
+                      >
+                        <Image src={item.image} alt={item.titleEn} fill sizes="400px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+                        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(44,24,16,0.6), transparent 50%)', pointerEvents: 'none' }} />
+                        <div style={{ position: 'absolute', top: 10, right: 10 }}>
+                          <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F5ECD7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
+                              <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div style={{ width: '100%', aspectRatio: '4/3', flexShrink: 0, background: 'linear-gradient(135deg, var(--bg-elevated), var(--bg-card))', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10, borderBottom: '1px solid var(--border)' }}>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.5 }}>
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                          <polyline points="14 2 14 8 20 8"/>
+                          <line x1="16" y1="13" x2="8" y2="13"/>
+                          <line x1="16" y1="17" x2="8" y2="17"/>
+                          <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Online Article</span>
+                      </div>
+                    )}
                     <div style={{ padding: '16px 18px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, flexWrap: 'wrap', gap: 4 }}>
                         <span style={{ fontSize: 11, fontWeight: 700, color: typeColors[item.type] || 'var(--terracotta)' }}>{item.publication}</span>
@@ -360,9 +433,15 @@ export default function PressPage() {
                         <p style={{ fontFamily: 'Lateef, serif', fontSize: 13, color: 'var(--terracotta)', direction: 'rtl', textAlign: 'right', marginBottom: 8, lineHeight: 1.8 }}>{item.titleSd}</p>
                       )}
                       <p style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.65, flex: 1, marginBottom: 12 }}>{item.description}</p>
-                      <button onClick={() => setLightbox(item)} className="btn-outline" style={{ width: '100%', justifyContent: 'center', fontSize: 11, padding: '7px 14px' }}>
-                        {tx(t.press.openImg, lang)}
-                      </button>
+                      {item.image ? (
+                        <button onClick={() => setLightbox(item)} className="btn-outline" style={{ width: '100%', justifyContent: 'center', fontSize: 11, padding: '7px 14px' }}>
+                          {tx(t.press.openImg, lang)}
+                        </button>
+                      ) : item.publicationUrl ? (
+                        <a href={item.publicationUrl} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ width: '100%', justifyContent: 'center', fontSize: 11, padding: '7px 14px', textAlign: 'center', display: 'block' }}>
+                          {isSd ? 'آرٽيڪل پڙهو' : 'Read Article →'}
+                        </a>
+                      ) : null}
                     </div>
                   </div>
                 ))}
