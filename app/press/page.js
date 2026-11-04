@@ -141,8 +141,133 @@ const pressItems = [
     featured: false,
   },
   {
+    id: 12,
+    image: '/press/WhatsApp Image 2026-11-04 at 8.57.27 AM.jpeg',
+    titleEn: 'Rozana Saat — 1st Death Anniversary Lecture Programme',
+    titleSd: 'روزانه ساٽ — پهرين ورسي ليڪچر پروگرام',
+    publication: 'Rozana Saat, Hyderabad',
+    date: '5 November 2024',
+    language: 'Sindhi',
+    type: 'Event Coverage',
+    publicationUrl: null,
+    description: 'Coverage of the 1st death anniversary lecture programme "ترجمي جي اهميت" (The Importance of Translation) — a tribute event organized by the Vali Ram Vallabh Literary Society. The programme featured prominent Sindhi scholars and writers discussing Vali Ram Vallabh\'s monumental contribution to translation and Sindhi literature.',
+    featured: true,
+  },
+  {
+    id: 13,
+    image: '/press/WhatsApp Image 2026-11-04 at 8.57.29 AM.jpeg',
+    titleEn: 'Arts Council of Pakistan — Condolence Reference',
+    titleSd: 'آرٽس ڪائونسل آف پاڪستان ڪراچي — تعزيتي ريفرنس',
+    publication: 'Arts Council of Pakistan, Karachi',
+    date: '29 December 2023',
+    language: 'English / Sindhi',
+    type: 'Condolence Reference',
+    publicationUrl: null,
+    description: 'Condolence Reference organized by the Arts Council of Pakistan, Karachi — "In Recognition of the literary services of Author & Translator Vali Ram Vallabh (1941–2023)." Held on 29 December 2023 at the Arts Council, Karachi.',
+    featured: true,
+  },
+  {
+    id: 14,
+    image: '/press/WhatsApp Image 2026-11-04 at 8.57.31 AM.jpeg',
+    titleEn: 'Dr. Murli Dhar Book Launch — Organized by Vali Ram Vallabh Literary Society',
+    titleSd: 'ڊاڪٽر مرلي ڌر جي ڪتاب جي مهورت — پاران ولي رام ولپ ادبي سوسائٽي',
+    publication: 'Vali Ram Vallabh Literary Society',
+    date: '24 May',
+    language: 'Sindhi',
+    type: 'Literary Event',
+    publicationUrl: null,
+    description: 'Book launch poster for "مهورت جذبن جي تمورتي" (Broken Emotions) by Dr. Murli Dhar — organized by the Vali Ram Vallabh Literary Society. Speakers included Amarsandho, Anita Kamleshwer, Pushpa Vallabh, Dr. Pushpa Ochani, Dr. Jameel Jotiyo, Dr. Hameed Somro, Zeb Sindi, Shabnam Gul, Dr. Irfan Mallah, Dr. Ali Murtaza Darijo, Dr. Kamleshwer, Medam Mehtab Akbar Rashdi, Prof. Muhammad Hashim Solangi, and Dr. Nazir Mahmood.',
+    featured: false,
+  },
+  {
+    id: 15,
+    image: '/press/WhatsApp Image 2026-11-04 at 8.56.37 AM.jpeg',
+    titleEn: 'Rozana Saat — Dr. Murli Dhar Book Launch News Coverage',
+    titleSd: 'روزانه ساٽ — ڊاڪٽر مرلي ڌر ڪتاب مهورت جي خبر',
+    publication: 'Rozana Saat, Hyderabad',
+    date: '25 May 2025',
+    language: 'Sindhi',
+    type: 'Event Coverage',
+    publicationUrl: null,
+    description: 'News report of the book launch of Dr. Murli Dhar\'s Sindhi, Urdu and English books — a joint launch event organized by the Vali Ram Vallabh Literary Society at the Sindhi Autonomous Institute, Hyderabad. The event was chaired by Dr. Baloch and highlighted Vali Ram Vallabh\'s enduring legacy through the literary society that continues his work.',
+    featured: false,
+  },
+  {
+    id: 16,
+    image: '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101247.png',
+    images: [
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101247.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101255.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101302.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101311.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101320.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101328.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101334.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101344.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101351.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101357.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101404.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101411.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101420.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101427.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101434.png',
+      '/kawish dunya news paper about gaza palistine/Screenshot 2026-11-04 101441.png',
+    ],
+    titleEn: 'Kawish Dunya — Special Issue: Gaza & Vali Ram Vallabh Tribute',
+    titleSd: 'ڪاوش دنيا — خاص شمارو: غزه ۽ ولي رام ولپ',
+    publication: 'Kawish Dunya, 5 November 2023',
+    date: '5 November 2023',
+    language: 'Sindhi',
+    type: 'Special Issue',
+    publicationUrl: null,
+    description: 'Kawish Dunya special issue (5 Nov 2023) featuring Vali Ram Vallabh on the front cover alongside Gaza coverage. The issue includes: "غزه جو درد ۽ دنيا" (Gaza\'s Pain and the World) — full article by Vali Ram Vallabh. Literary tributes: "جن حيدرآباد ٿي ويو" (When Hyderabad Became) by Naseer Mirza; "ولي رام ولپ: نفيس ماٿو، مانائتو ليکڪ" (A Refined Mind, A Worthy Writer) by Mumtaz Meher (with photo by Abro Khuda Bux); "سنڌلاجي، ولي رام ولپ ۽ مان" (Sindhology, Vali Ram Vallabh and I) by Saeed Mangi.',
+    featured: true,
+  },
+  {
+    id: 17,
+    image: '/Valiram Vallabh memory/Screenshot 2026-11-04 101026.png',
+    images: [
+      '/Valiram Vallabh memory/Screenshot 2026-11-04 101026.png',
+      '/Valiram Vallabh memory/Screenshot 2026-11-04 101033.png',
+      '/Valiram Vallabh memory/Screenshot 2026-11-04 101043.png',
+      '/Valiram Vallabh memory/Screenshot 2026-11-04 101051.png',
+      '/Valiram Vallabh memory/Screenshot 2026-11-04 101100.png',
+      '/Valiram Vallabh memory/Screenshot 2026-11-04 101108.png',
+    ],
+    titleEn: 'Imrata Magazine Issue 134 — A Tribute to a Legend',
+    titleSd: 'امرتا رسالو، شمارو 134 — هڪ ليجنڊ کي خراجِ عقيدت',
+    publication: 'Imrata Magazine, Issue 134',
+    date: 'November 2023',
+    language: 'English / Sindhi',
+    type: 'Memorial Issue',
+    publicationUrl: null,
+    description: 'A complete tribute issue of Imrata Magazine dedicated to Vali Ram Vallabh (1941–2023). Editor: Faqir Muhammad Dhol. Editorial Board: Manzoor Jokhio & Mithal Jiskani. Contents: "My Nanu… My Inspiration" (Rahul Chhabria, Grandson); "He wasn\'t like other Nanus" (Komal, Grand Daughter); "For Nanu…" (Sameer Rai Chhabria, Grandson); "Vali Ram Vallab" — poem by Dr. Ranomal Pryans; "همت ۽ حوصلي واري شخصيت" by Dr. Chandi Ram Shahani; "سنڌي ادب جو منفرد ليکڪ" by Saeed Mangi. Includes "The Memoirs" — a rare photo album featuring Vali Ram Vallabh with Ayaz Gul, Murad Ali Mirza, Ibrahim Joyo, Shaikh Ayaz, Taj Joyo, Imdad Hussaini, and other literary greats.',
+    featured: true,
+  },
+  {
+    id: 18,
+    image: '/valiram profile in sindhi/Screenshot 2026-11-04 101732.png',
+    images: [
+      '/valiram profile in sindhi/Screenshot 2026-11-04 101732.png',
+      '/valiram profile in sindhi/Screenshot 2026-11-04 101747.png',
+      '/valiram profile in sindhi/Screenshot 2026-11-04 101753.png',
+      '/valiram profile in sindhi/Screenshot 2026-11-04 101758.png',
+      '/valiram profile in sindhi/Screenshot 2026-11-04 101806.png',
+      '/valiram profile in sindhi/Screenshot 2026-11-04 101810.png',
+    ],
+    titleEn: 'Vali Ram Vallabh — Complete Profile in Sindhi',
+    titleSd: 'ولي رام ولپ — سنڌيءَ ۾ مڪمل پروفائيل',
+    publication: 'Sindhi Literary Archive',
+    date: '2023',
+    language: 'Sindhi',
+    type: 'Profile Article',
+    publicationUrl: null,
+    description: 'A comprehensive 6-page Sindhi profile of Vali Ram Vallabh covering his complete literary output: 10 translated novels, 8 translated short story collections, 112 translated stories from 26 languages, poetry collections, 7 translated plays, research works, edited volumes, and a chronological list of 26 awards (1989–2015). Born 18 August 1941 in Mithi, he worked at the Forest Department, advertising, and the Institute of Sindhology. Translated from Tolstoy, Moravia, Krishan Chander, Amrita Pritam, Tagore, and others.',
+    featured: false,
+  },
+  {
     id: 11,
-    image: null,
+    image: '/press/online article.png',
     titleEn: 'Vali Ram Vallabh — An Epoch-Making Litterateur',
     titleSd: 'ولي رام ولڀ — ايھد ساز اديب',
     publication: 'Express.pk',
@@ -234,11 +359,18 @@ const typeColors = {
 
 export default function PressPage() {
   const [lightbox, setLightbox] = useState(null)
+  const [lightboxPage, setLightboxPage] = useState(0)
   const { lang } = useLanguage()
+
+  const openLightbox = (item) => { setLightbox(item); setLightboxPage(0) }
   const isSd = lang === 'sd'
 
   const featured = pressItems.filter(p => p.featured)
   const rest = pressItems.filter(p => !p.featured)
+
+  // current lightbox image (supports multi-page items)
+  const lightboxImages = lightbox ? (lightbox.images || [lightbox.image]) : []
+  const currentImg = lightboxImages[lightboxPage] || lightbox?.image
 
   return (
     <>
@@ -256,10 +388,10 @@ export default function PressPage() {
           </p>
           <div style={{ display: 'flex', gap: 24, marginTop: 24, flexWrap: 'wrap' }}>
             {[
-              { n: '7', l: isSd ? 'اشاعتون' : 'Publications' },
-              { n: '3', l: isSd ? 'اخبارون' : 'Newspapers' },
+              { n: '18', l: isSd ? 'اشاعتون' : 'Publications' },
+              { n: '5', l: isSd ? 'اخبارون' : 'Newspapers' },
               { n: '8', l: isSd ? 'سنڌي متن' : 'Sindhi Texts' },
-              { n: '3', l: isSd ? 'سال' : 'Years Covered' },
+              { n: '3+', l: isSd ? 'سال' : 'Years Covered' },
             ].map(s => (
               <div key={s.l} style={{ textAlign: 'center' }}>
                 <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, fontWeight: 800, color: '#C9943A' }}>{s.n}</div>
@@ -288,7 +420,7 @@ export default function PressPage() {
 
                 {/* Full clickable image */}
                 <div
-                  onClick={() => setLightbox(item)}
+                  onClick={() => openLightbox(item)}
                   style={{ position: 'relative', width: '100%', aspectRatio: '3/4', cursor: 'zoom-in', flexShrink: 0, background: 'var(--bg-elevated)', overflow: 'hidden' }}
                 >
                   <Image
@@ -342,7 +474,7 @@ export default function PressPage() {
                   )}
                   <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7, flex: 1, marginBottom: 14 }}>{item.description}</p>
                   <button
-                    onClick={() => setLightbox(item)}
+                    onClick={() => openLightbox(item)}
                     className="btn-outline"
                     style={{ width: '100%', justifyContent: 'center', fontSize: 12, padding: '8px 16px' }}
                   >
@@ -397,7 +529,7 @@ export default function PressPage() {
                   <div key={item.id} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                     {item.image ? (
                       <div
-                        onClick={() => setLightbox(item)}
+                        onClick={() => openLightbox(item)}
                         style={{ position: 'relative', width: '100%', aspectRatio: '4/3', cursor: 'zoom-in', flexShrink: 0, background: 'var(--bg-elevated)', overflow: 'hidden' }}
                       >
                         <Image src={item.image} alt={item.titleEn} fill sizes="400px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
@@ -434,7 +566,7 @@ export default function PressPage() {
                       )}
                       <p style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.65, flex: 1, marginBottom: 12 }}>{item.description}</p>
                       {item.image ? (
-                        <button onClick={() => setLightbox(item)} className="btn-outline" style={{ width: '100%', justifyContent: 'center', fontSize: 11, padding: '7px 14px' }}>
+                        <button onClick={() => openLightbox(item)} className="btn-outline" style={{ width: '100%', justifyContent: 'center', fontSize: 11, padding: '7px 14px' }}>
                           {tx(t.press.openImg, lang)}
                         </button>
                       ) : item.publicationUrl ? (
@@ -464,10 +596,10 @@ export default function PressPage() {
         </div>
       </section>
 
-      {/* Lightbox — full size image viewer */}
+      {/* Lightbox — full size image viewer with multi-page support */}
       {lightbox && (
         <div
-          onClick={() => setLightbox(null)}
+          onClick={() => { setLightbox(null); setLightboxPage(0) }}
           style={{
             position: 'fixed', inset: 0, zIndex: 9999,
             background: 'rgba(10,5,3,0.96)', backdropFilter: 'blur(8px)',
@@ -477,7 +609,7 @@ export default function PressPage() {
         >
           {/* Close */}
           <button
-            onClick={() => setLightbox(null)}
+            onClick={() => { setLightbox(null); setLightboxPage(0) }}
             style={{ position: 'fixed', top: 20, right: 20, background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#F5ECD7', fontSize: 18, cursor: 'pointer', width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000, flexShrink: 0 }}
           >✕</button>
 
@@ -494,14 +626,48 @@ export default function PressPage() {
               <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.5)' }}>{lightbox.date}{lightbox.author ? ` · ${tx(t.press.by, lang)} ${lightbox.author}` : ''}</p>
             </div>
 
+            {/* Multi-page indicator */}
+            {lightboxImages.length > 1 && (
+              <div style={{ textAlign: 'center', marginBottom: 12 }}>
+                <span style={{ fontSize: 11, color: 'rgba(201,148,58,0.8)', fontWeight: 600 }}>
+                  {isSd ? `صفحو ${lightboxPage + 1} مان ${lightboxImages.length}` : `Page ${lightboxPage + 1} of ${lightboxImages.length}`}
+                </span>
+              </div>
+            )}
+
             {/* Full image */}
-            <div style={{ borderRadius: 12, overflow: 'hidden', marginBottom: 20, background: '#111' }}>
+            <div style={{ borderRadius: 12, overflow: 'hidden', marginBottom: 16, background: '#111' }}>
               <img
-                src={lightbox.image}
+                src={currentImg}
                 alt={lightbox.titleEn}
                 style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '80vh', objectFit: 'contain' }}
               />
             </div>
+
+            {/* Multi-page navigation */}
+            {lightboxImages.length > 1 && (
+              <div style={{ display: 'flex', gap: 8, justifyContent: 'center', alignItems: 'center', marginBottom: 16, flexWrap: 'wrap' }}>
+                <button
+                  onClick={() => setLightboxPage(p => Math.max(0, p - 1))}
+                  disabled={lightboxPage === 0}
+                  style={{ padding: '8px 20px', background: lightboxPage === 0 ? 'rgba(255,255,255,0.03)' : 'rgba(201,148,58,0.15)', border: '1px solid rgba(201,148,58,0.3)', borderRadius: 8, color: lightboxPage === 0 ? 'rgba(245,236,215,0.3)' : '#C9943A', cursor: lightboxPage === 0 ? 'default' : 'pointer', fontSize: 13, fontWeight: 600 }}
+                >← {isSd ? 'اڳيون' : 'Prev'}</button>
+                <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', justifyContent: 'center' }}>
+                  {lightboxImages.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setLightboxPage(i)}
+                      style={{ width: 28, height: 28, borderRadius: 6, background: i === lightboxPage ? 'rgba(201,148,58,0.4)' : 'rgba(255,255,255,0.06)', border: `1px solid ${i === lightboxPage ? 'rgba(201,148,58,0.6)' : 'rgba(255,255,255,0.12)'}`, color: i === lightboxPage ? '#C9943A' : 'rgba(245,236,215,0.5)', cursor: 'pointer', fontSize: 11, fontWeight: 700 }}
+                    >{i + 1}</button>
+                  ))}
+                </div>
+                <button
+                  onClick={() => setLightboxPage(p => Math.min(lightboxImages.length - 1, p + 1))}
+                  disabled={lightboxPage === lightboxImages.length - 1}
+                  style={{ padding: '8px 20px', background: lightboxPage === lightboxImages.length - 1 ? 'rgba(255,255,255,0.03)' : 'rgba(201,148,58,0.15)', border: '1px solid rgba(201,148,58,0.3)', borderRadius: 8, color: lightboxPage === lightboxImages.length - 1 ? 'rgba(245,236,215,0.3)' : '#C9943A', cursor: lightboxPage === lightboxImages.length - 1 ? 'default' : 'pointer', fontSize: 13, fontWeight: 600 }}
+                >{isSd ? 'پوءِ' : 'Next'} →</button>
+              </div>
+            )}
 
             {/* Description */}
             <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 12, padding: '20px 24px', marginBottom: 16 }}>
@@ -510,10 +676,10 @@ export default function PressPage() {
 
             {/* Navigation */}
             <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
-              {pressItems.filter(p => p.id !== lightbox.id).slice(0, 3).map(p => (
+              {pressItems.filter(p => p.id !== lightbox.id && p.image).slice(0, 3).map(p => (
                 <button
                   key={p.id}
-                  onClick={() => setLightbox(p)}
+                  onClick={() => openLightbox(p)}
                   style={{ padding: '8px 16px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 8, color: 'rgba(245,236,215,0.7)', cursor: 'pointer', fontSize: 12, transition: 'all 0.2s' }}
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgba(201,148,58,0.15)'; e.currentTarget.style.color = '#C9943A' }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.color = 'rgba(245,236,215,0.7)' }}
