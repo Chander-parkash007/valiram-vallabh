@@ -135,10 +135,10 @@ export const metadata = {
     },
   },
 
-  // ── Verification (add Search Console code here) ────────────────────────────
-  // verification: {
-  //   google: 'YOUR_GOOGLE_VERIFICATION_CODE',
-  // },
+  // ── Verification ───────────────────────────────────────────────────────────
+  verification: {
+    google: 'DUbvF047JJOU7YdL53o_7Gs5cfT-8xioFeFYbwFeess',
+  },
 
   // ── Misc ───────────────────────────────────────────────────────────────────
   category: 'literature',
