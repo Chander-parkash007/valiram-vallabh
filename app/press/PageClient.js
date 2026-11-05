@@ -428,7 +428,7 @@ export default function PressPage() {
                     alt={item.titleEn}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
-                    style={{ objectFit: 'cover', objectPosition: 'center top', transition: 'transform 0.3s' }}
+                    style={{ objectFit: 'contain', objectPosition: 'center', background: 'var(--cream)', transition: 'transform 0.3s' }}
                     onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.03)'}
                     onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                   />
@@ -464,15 +464,15 @@ export default function PressPage() {
                       <span style={{ fontSize: 11, color: 'var(--gold)', fontWeight: 600 }}>{tx(t.press.by, lang)} {item.author}</span>
                     )}
                   </div>
-                  <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: 1.35 }}>
-                    {item.titleEn}
+                  <h3 style={{ fontFamily: isSd && item.titleSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd && item.titleSd ? 20 : 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: isSd && item.titleSd ? 2 : 1.35, direction: isSd && item.titleSd ? 'rtl' : 'ltr' }}>
+                    {isSd && item.titleSd ? item.titleSd : item.titleEn}
                   </h3>
-                  {item.titleSd && (
+                  {isSd && item.titleSd ? null : item.titleSd && (
                     <p style={{ fontFamily: 'Lateef, serif', fontSize: 13, color: 'var(--terracotta)', direction: 'rtl', textAlign: 'right', marginBottom: 8, lineHeight: 1.8 }}>
                       {item.titleSd}
                     </p>
                   )}
-                  <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7, flex: 1, marginBottom: 14 }}>{item.description}</p>
+                  <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, flex: 1, marginBottom: 14, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{isSd && item.descriptionSd ? item.descriptionSd : item.description}</p>
                   <button
                     onClick={() => openLightbox(item)}
                     className="btn-outline"
@@ -532,7 +532,7 @@ export default function PressPage() {
                         onClick={() => openLightbox(item)}
                         style={{ position: 'relative', width: '100%', aspectRatio: '4/3', cursor: 'zoom-in', flexShrink: 0, background: 'var(--bg-elevated)', overflow: 'hidden' }}
                       >
-                        <Image src={item.image} alt={item.titleEn} fill sizes="400px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+                        <Image src={item.image} alt={item.titleEn} fill sizes="400px" style={{ objectFit: 'contain', objectPosition: 'center', background: 'var(--cream)' }} />
                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(44,24,16,0.6), transparent 50%)', pointerEvents: 'none' }} />
                         <div style={{ position: 'absolute', top: 10, right: 10 }}>
                           <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

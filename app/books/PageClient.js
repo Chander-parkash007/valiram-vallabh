@@ -96,10 +96,10 @@ export default function BooksPage() {
       <section className="page-hero">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>{tx(t.books.tag, lang)}</div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em', direction: isSd ? 'rtl' : 'ltr' }}>
             {tx(t.books.title, lang)}
           </h1>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, marginBottom: 20, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr', lineHeight: isSd ? 2.2 : 1.6 }}>
             {tx(t.books.desc, lang)}
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
@@ -192,11 +192,13 @@ export default function BooksPage() {
                     <p className="font-sindhi" style={{ fontSize: 18, color: 'var(--terracotta)', fontWeight: 700, lineHeight: 1.6 }}>{book.titleSd}</p>
                     <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 15, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.3 }}>{book.titleEn}</h3>
                     {book.originalAuthor && book.originalAuthor !== 'Vali Ram Vallabh' && (
-                      <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
-                        {isSd ? 'اصل: ' : 'Original: '}<span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{book.originalAuthor}</span>
+                      <p style={{ fontSize: 12, color: 'var(--text-muted)', direction: isSd ? 'rtl' : 'ltr', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                        {isSd ? 'اصل ليکڪ: ' : 'Original: '}<span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{book.originalAuthor}</span>
                       </p>
                     )}
-                    <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.6, flex: 1 }}>{book.description.slice(0, 110)}...</p>
+                    <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.6, flex: 1, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+                      {isSd && book.descriptionSd ? book.descriptionSd.slice(0, 120) : book.description.slice(0, 110)}...
+                    </p>
                     <div className="btn-green" style={{ padding: '8px 16px', fontSize: 12, justifyContent: 'center', marginTop: 4, textAlign: 'center', borderRadius: 8 }}>
                       {tx(t.books.readOnline, lang)}
                     </div>

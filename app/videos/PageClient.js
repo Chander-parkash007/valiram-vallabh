@@ -23,8 +23,12 @@ function YouTubeEmbed({ video, isSd }) {
             YouTube
           </span>
         </div>
-        <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 8, lineHeight: 1.4 }}>{video.titleEn}</h3>
-        <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.6 }}>{video.descriptionEn}</p>
+        <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 20 : 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 8, lineHeight: isSd ? 2 : 1.4, direction: isSd ? 'rtl' : 'ltr' }}>
+          {isSd && video.titleSd ? video.titleSd : video.titleEn}
+        </h3>
+        <p style={{ fontSize: isSd ? 16 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.6, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+          {isSd && video.descriptionSd ? video.descriptionSd : video.descriptionEn}
+        </p>
       </div>
     </div>
   )
@@ -51,8 +55,12 @@ function FacebookEmbed({ video }) {
             <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.7)', fontWeight: 500 }}>{isSd ? 'فيسبڪ تي ڏسو' : 'Watch on Facebook'}</p>
           </div>
         </div>
-        <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 15, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4 }}>{video.titleEn}</h3>
-        <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.6 }}>{video.descriptionEn}</p>
+        <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 19 : 15, fontWeight: 700, color: 'var(--text-primary)', lineHeight: isSd ? 2 : 1.4, direction: isSd ? 'rtl' : 'ltr' }}>
+          {isSd && video.titleSd ? video.titleSd : video.titleEn}
+        </h3>
+        <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.6, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+          {isSd && video.descriptionSd ? video.descriptionSd : video.descriptionEn}
+        </p>
         <a href={video.url} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
           {tx(t.videos.watchFb, lang)}
         </a>
