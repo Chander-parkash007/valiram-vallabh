@@ -129,8 +129,11 @@ export default function AwardsPage() {
             ))}
           </div>
 
-          <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 20 }}>
-            {tx(t.awards.showing, lang)} {filtered.length} {tx(t.awards.awardsLabel, lang)}
+          <p style={{ fontSize: isSd ? 16 : 13, color: 'var(--text-muted)', marginBottom: 20, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+            {isSd
+              ? `${filtered.length} اعزاز ڏيکاريا پيا وڃن`
+              : `${tx(t.awards.showing, lang)} ${filtered.length} ${tx(t.awards.awardsLabel, lang)}`
+            }
           </p>
 
           {/* Awards list */}
@@ -160,7 +163,7 @@ export default function AwardsPage() {
                     <p style={{ fontSize: isSd ? 15 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.8 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.organisation}</p>
                     {a.noteEn && <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-secondary)', fontWeight: 500, marginTop: 4, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.noteEn}</p>}
                   </div>
-                  <span style={{ fontSize: 10, padding: '3px 10px', borderRadius: 100, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', flexShrink: 0, background: 'var(--bg-elevated)', color: 'var(--text-muted)', border: '1px solid var(--border)' }}>
+                  <span style={{ fontSize: 10, padding: '3px 10px', borderRadius: 100, fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', flexShrink: 0, background: 'var(--bg-elevated)', color: 'var(--text-muted)', border: '1px solid var(--border)', fontFamily: isSd ? 'Lateef, serif' : 'inherit', fontSize: isSd ? 13 : 10 }}>
                     {isSd ? (catSd[a.category] || a.category) : a.category}
                   </span>
                 </div>

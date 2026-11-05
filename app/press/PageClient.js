@@ -380,22 +380,22 @@ export default function PressPage() {
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>
             {tx(t.press.tag, lang)}
           </div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em' }}>
             {tx(t.press.title, lang)}
           </h1>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>
             {tx(t.press.desc, lang)}
           </p>
           <div style={{ display: 'flex', gap: 24, marginTop: 24, flexWrap: 'wrap' }}>
             {[
               { n: '18', l: isSd ? 'اشاعتون' : 'Publications' },
-              { n: '5', l: isSd ? 'اخبارون' : 'Newspapers' },
-              { n: '8', l: isSd ? 'سنڌي متن' : 'Sindhi Texts' },
+              { n: '5',  l: isSd ? 'اخبارون' : 'Newspapers' },
+              { n: '8',  l: isSd ? 'سنڌي متن' : 'Sindhi Texts' },
               { n: '3+', l: isSd ? 'سال' : 'Years Covered' },
             ].map(s => (
-              <div key={s.l} style={{ textAlign: 'center' }}>
+              <div key={s.l} style={{ textAlign: isSd ? 'right' : 'center' }}>
                 <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, fontWeight: 800, color: '#C9943A' }}>{s.n}</div>
-                <div style={{ fontSize: 11, color: 'rgba(245,236,215,0.6)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{s.l}</div>
+                <div style={{ fontSize: isSd ? 14 : 11, color: 'rgba(245,236,215,0.6)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{s.l}</div>
               </div>
             ))}
           </div>

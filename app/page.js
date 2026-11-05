@@ -12,6 +12,22 @@ export default function HomePage() {
   const featuredAwards = awards.filter(a => a.featured)
   const recentBooks = books.slice(0, 6)
 
+  const catSd = {
+    'Translated Novel':           'ترجمو ٿيل ناول',
+    'Translated Novelette':       'ترجمو ٿيل ننڍو ناول',
+    'Translated Plays':           'ترجمو ٿيل ڊرامو',
+    'Translated Stories':         'ترجمو ٿيل ڪهاڻيون',
+    'Translated Poetry':          'ترجمو ٿيل شاعري',
+    'Compiled Anthology':         'گڏ ڪيل انٿالاجي',
+    'Literary Journal':           'ادبي رسالو',
+    'Research Journal':           'تحقيقي رسالو',
+    'Autobiography / Interviews': 'سوانح / انٽرويو',
+    'Philosophy / Religion':      'فلسفو / مذهب',
+    'Original Work':              'اصل ڪم',
+    'Educational':                'تعليمي',
+    'Compiled Work':              'گڏ ڪيل ڪم',
+  }
+
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────── */}
@@ -62,10 +78,10 @@ export default function HomePage() {
 
               <blockquote style={{
                 borderLeft: '3px solid var(--gold)', paddingLeft: 16, marginBottom: 32,
-                fontFamily: 'Playfair Display, serif', fontStyle: 'italic',
-                fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.75,
+                fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontStyle: isSd ? 'normal' : 'italic',
+                fontSize: isSd ? 20 : 15, color: 'var(--text-secondary)', lineHeight: isSd ? 2.2 : 1.75,
               }}>
-                "{person.quoteEn}"
+                {isSd ? `"${person.quoteSd}"` : `"${person.quoteEn}"`}
               </blockquote>
 
               {/* Stats */}
@@ -80,7 +96,7 @@ export default function HomePage() {
                     <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 30, fontWeight: 800, color: 'var(--terracotta)', lineHeight: 1 }}>
                       {s.number}
                     </div>
-                    <div style={{ fontSize: 10, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: 4 }}>
+                    <div style={{ fontSize: isSd ? 14 : 10, color: 'var(--text-muted)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.08em', marginTop: 4, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                       {s.label}
                     </div>
                   </div>
@@ -177,11 +193,11 @@ export default function HomePage() {
                     </svg>
                   </span>
                 </div>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: 1.3 }}>
-                  {a.nameEn}
+                <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 18 : 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: isSd ? 1.9 : 1.3 }}>
+                  {isSd && a.nameAward ? a.nameAward : a.nameEn}
                 </h3>
-                <p style={{ fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.5 }}>{a.organisation}</p>
-                {a.noteEn && <p style={{ fontSize: 11, color: 'var(--gold)', marginTop: 8, fontWeight: 600 }}>{a.noteEn}</p>}
+                <p style={{ fontSize: isSd ? 15 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.8 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.organisation}</p>
+                {a.noteEn && <p style={{ fontSize: isSd ? 14 : 11, color: 'var(--gold)', marginTop: 8, fontWeight: 600, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.noteEn}</p>}
               </div>
             ))}
           </div>
@@ -217,20 +233,24 @@ export default function HomePage() {
               }}>
                 <div style={{ height: 3, borderRadius: 100, background: 'linear-gradient(90deg, var(--terracotta), var(--gold))' }} />
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <span className="tag-green" style={{ fontSize: 10 }}>{book.category}</span>
+                  <span className="tag-green" style={{ fontSize: 10, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                    {isSd ? (catSd[book.category] || book.category) : book.category}
+                  </span>
                   <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600 }}>{book.year}</span>
                 </div>
                 <p style={{ fontFamily: 'Lateef, serif', fontSize: 18, color: 'var(--terracotta)', direction: 'rtl', textAlign: 'right', lineHeight: 1.8 }}>
                   {book.titleSd}
                 </p>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 15, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.3 }}>
-                  {book.titleEn}
+                <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 20 : 15, fontWeight: 700, color: 'var(--text-primary)', lineHeight: isSd ? 1.9 : 1.3 }}>
+                  {isSd ? book.titleSd : book.titleEn}
                 </h3>
                 {book.originalAuthor && book.originalAuthor !== 'Vali Ram Vallabh' && (
-                  <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>{isSd ? 'اصل:' : 'Original:'} {book.originalAuthor}</p>
+                  <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-muted)', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                    {isSd ? 'اصل ليکڪ:' : 'Original:'} {book.originalAuthor}
+                  </p>
                 )}
-                <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.6, flex: 1 }}>
-                  {book.description.slice(0, 100)}...
+                <p style={{ fontSize: isSd ? 16 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.6, flex: 1, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                  {isSd && book.descriptionSd ? book.descriptionSd.slice(0, 120) : book.description.slice(0, 100)}...
                 </p>
                 <Link href="/books" className="btn-green" style={{ padding: '8px 16px', fontSize: 12, justifyContent: 'center', marginTop: 4 }}>
                   {isSd ? 'آنلائن پڙهو' : 'Read Online'}
@@ -250,8 +270,8 @@ export default function HomePage() {
               ? 'جيستائين ڪهاڻيون ٻڌايون وينديون ۽ خيال اڏامندا رهندا، توهان جو ورثو هر انهي دل ۾ زنده رهندو جنهن کي توهان ڇُهيو.'
               : 'As long as stories are told and thoughts take flight, your legacy will live on in every heart you touched.'}
           </blockquote>
-          <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.55)', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 40 }}>
-            Dawn Newspaper — 2nd Death Anniversary, October 2025
+          <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.55)', fontWeight: 600, letterSpacing: '0.08em', textTransform: isSd ? 'none' : 'uppercase', marginBottom: 40, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+            {isSd ? 'ڊان اخبار — ٻي ورسي، آڪٽوبر 2025ع' : 'Dawn Newspaper — 2nd Death Anniversary, October 2025'}
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/tributes" style={{ padding: '12px 24px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 8, color: '#F5ECD7', textDecoration: 'none', fontSize: 14, fontWeight: 600, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>

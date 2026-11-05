@@ -104,8 +104,12 @@ export default function VideosPage() {
                 </div>
               </div>
               <div style={{ marginTop: 20, padding: '20px 0' }}>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 20, color: '#F5ECD7', marginBottom: 10 }}>{featuredYT.titleEn}</h3>
-                <p style={{ fontSize: 14, color: 'rgba(245,236,215,0.7)', lineHeight: 1.7 }}>{featuredYT.descriptionEn}</p>
+                <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 24 : 20, color: '#F5ECD7', marginBottom: 10, lineHeight: isSd ? 2 : 1.4 }}>
+                  {isSd && featuredYT.titleSd ? featuredYT.titleSd : featuredYT.titleEn}
+                </h3>
+                <p style={{ fontSize: isSd ? 17 : 14, color: 'rgba(245,236,215,0.7)', lineHeight: isSd ? 2.1 : 1.7, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                  {isSd && featuredYT.descriptionSd ? featuredYT.descriptionSd : featuredYT.descriptionEn}
+                </p>
               </div>
             </div>
           </div>

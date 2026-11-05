@@ -193,7 +193,7 @@ export default function BooksPage() {
                   </div>
                   <div style={{ padding: '16px 20px 20px', display: 'flex', flexDirection: 'column', gap: 8, flex: 1 }}>
                     <p className="font-sindhi" style={{ fontSize: 18, color: 'var(--terracotta)', fontWeight: 700, lineHeight: 1.6 }}>{book.titleSd}</p>
-                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 15, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.3 }}>{book.titleEn}</h3>
+                    {!isSd && <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 15, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.3 }}>{book.titleEn}</h3>}
                     {book.originalAuthor && book.originalAuthor !== 'Vali Ram Vallabh' && (
                       <p style={{ fontSize: 12, color: 'var(--text-muted)', direction: isSd ? 'rtl' : 'ltr', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                         {isSd ? 'اصل ليکڪ: ' : 'Original: '}<span style={{ color: 'var(--text-secondary)', fontWeight: 500 }}>{book.originalAuthor}</span>

@@ -55,20 +55,24 @@ export default function TributesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 2 }}>
-                      {tribute.authorEn}
+                    <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 20 : 18, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 2, lineHeight: isSd ? 1.8 : 1.3 }}>
+                      {isSd && tribute.authorSd ? tribute.authorSd : tribute.authorEn}
                     </h3>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                      <span className="tag" style={{ fontSize: 9 }}>{tribute.relationEn}</span>
-                      <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>{tribute.languageEn}</span>
+                      <span className="tag" style={{ fontSize: 9, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                        {isSd && tribute.relationSd ? tribute.relationSd : tribute.relationEn}
+                      </span>
+                      <span style={{ fontSize: isSd ? 14 : 11, color: 'var(--text-muted)', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                        {isSd && tribute.languageSd ? tribute.languageSd : tribute.languageEn}
+                      </span>
                     </div>
                   </div>
                 </div>
-                <h4 style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic', fontSize: 16, color: 'var(--terracotta)', marginBottom: 16 }}>
-                  "{tribute.titleEn}"
+                <h4 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontStyle: isSd ? 'normal' : 'italic', fontSize: isSd ? 20 : 16, color: 'var(--terracotta)', marginBottom: 16, lineHeight: isSd ? 1.9 : 1.4 }}>
+                  "{isSd && tribute.titleSd ? tribute.titleSd : tribute.titleEn}"
                 </h4>
-                <blockquote style={{ borderLeft: '3px solid var(--border)', paddingLeft: 20, fontFamily: 'Playfair Display, serif', fontStyle: 'italic', fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: 16 }}>
-                  "{tribute.textEn}"
+                <blockquote style={{ borderLeft: '3px solid var(--border)', paddingLeft: 20, fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontStyle: isSd ? 'normal' : 'italic', fontSize: isSd ? 18 : 16, color: 'var(--text-secondary)', lineHeight: isSd ? 2.2 : 1.8, marginBottom: 16 }}>
+                  "{isSd && tribute.textSd ? tribute.textSd : tribute.textEn}"
                 </blockquote>
                 <p style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   — {tribute.source}
