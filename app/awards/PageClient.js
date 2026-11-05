@@ -56,10 +56,10 @@ export default function AwardsPage() {
       <section className="page-hero">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>{tx(t.awards.tag, lang)}</div>
-          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? '0' : '-0.03em', direction: isSd ? 'rtl' : 'ltr' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? '0' : '-0.03em' }}>
             {tx(t.awards.title, lang)}
           </h1>
-          <p style={{ fontSize: isSd ? 18 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr', lineHeight: isSd ? 2 : 1.6 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.2 : 1.6 }}>
             {tx(t.awards.desc, lang)}
           </p>
         </div>
@@ -92,12 +92,12 @@ export default function AwardsPage() {
                       <span className="tag-gold">{a.year}</span>
                     </div>
                   )}
-                  <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 20 : 17, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 8, lineHeight: isSd ? 2 : 1.3, direction: isSd ? 'rtl' : 'ltr' }}>
+                  <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 20 : 17, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 8, lineHeight: isSd ? 2 : 1.3 }}>
                     {isSd && a.nameAward ? a.nameAward : a.nameEn}
                   </h3>
-                  <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-muted)', lineHeight: isSd ? 1.9 : 1.6, marginBottom: 8, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{a.organisation}</p>
+                  <p style={{ fontSize: isSd ? 16 : 13, color: 'var(--text-muted)', lineHeight: isSd ? 1.9 : 1.6, marginBottom: 8, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.organisation}</p>
                   {a.noteEn && (
-                    <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--gold)', fontWeight: 600, padding: '6px 10px', background: 'rgba(201,148,58,0.08)', borderRadius: 6, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+                    <p style={{ fontSize: isSd ? 15 : 12, color: 'var(--gold)', fontWeight: 600, padding: '6px 10px', background: 'rgba(201,148,58,0.08)', borderRadius: 6, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                       {a.noteEn}
                     </p>
                   )}
@@ -154,11 +154,11 @@ export default function AwardsPage() {
                     </div>
                   )}
                   <div style={{ flex: 1, minWidth: 200 }}>
-                    <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 18 : 15, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 4, direction: isSd ? 'rtl' : 'ltr', lineHeight: isSd ? 1.9 : 1.4 }}>
+                    <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 18 : 15, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 4, lineHeight: isSd ? 1.9 : 1.4 }}>
                       {isSd && a.nameAward ? a.nameAward : a.nameEn}
                     </h3>
-                    <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.8 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{a.organisation}</p>
-                    {a.noteEn && <p style={{ fontSize: isSd ? 13 : 12, color: 'var(--text-secondary)', fontWeight: 500, marginTop: 4, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{a.noteEn}</p>}
+                    <p style={{ fontSize: isSd ? 15 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.8 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.organisation}</p>
+                    {a.noteEn && <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-secondary)', fontWeight: 500, marginTop: 4, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.noteEn}</p>}
                   </div>
                   <span style={{ fontSize: 10, padding: '3px 10px', borderRadius: 100, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', flexShrink: 0, background: 'var(--bg-elevated)', color: 'var(--text-muted)', border: '1px solid var(--border)' }}>
                     {isSd ? (catSd[a.category] || a.category) : a.category}

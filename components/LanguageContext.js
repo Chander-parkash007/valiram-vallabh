@@ -10,25 +10,30 @@ export function LanguageProvider({ children }) {
   // Load from localStorage on mount
   useEffect(() => {
     const saved = typeof window !== 'undefined' ? localStorage.getItem('vvlang') : null
-    if (saved === 'sd' || saved === 'en') setLangState(saved)
+    if (saved === 'sd' || saved === 'en') {
+      setLangState(saved)
+      applyLangToDOM(saved)
+    }
   }, [])
 
-  // Persist + flip HTML dir on change
-  const setLang = (l) => {
-    setLangState(l)
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('vvlang', l)
-      document.documentElement.lang = l === 'sd' ? 'sd' : 'en'
-    }
+  function applyLangToDOM(l) {
+    if (typeof window === 'undefined') return
+    const html = document.documentElement
+    html.lang = l === 'sd' ? 'sd' : 'en'
+    // Full RTL for Sindhi — this is what makes all text read correctly right-to-left
+    html.dir = l === 'sd' ? 'rtl' : 'ltr'
+    // Apply Lateef font to body when Sindhi
+    document.body.style.fontFamily = l === 'sd' ? "'Lateef', serif" : ''
   }
 
-  // Apply dir on first render too
+  const setLang = (l) => {
+    setLangState(l)
+    localStorage.setItem('vvlang', l)
+    applyLangToDOM(l)
+  }
+
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Don't flip whole page dir — Sindhi text handles its own RTL inline
-      // Only set lang attribute for accessibility
-      document.documentElement.lang = lang === 'sd' ? 'sd' : 'en'
-    }
+    applyLangToDOM(lang)
   }, [lang])
 
   return (
