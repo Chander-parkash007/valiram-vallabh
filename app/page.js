@@ -233,7 +233,7 @@ export default function HomePage() {
                   {book.description.slice(0, 100)}...
                 </p>
                 <Link href="/books" className="btn-green" style={{ padding: '8px 16px', fontSize: 12, justifyContent: 'center', marginTop: 4 }}>
-                  {isSd ? 'آن لائين پڙهو' : 'Read Online'}
+                  {isSd ? 'آنلائن پڙهو' : 'Read Online'}
                 </Link>
               </div>
             ))}

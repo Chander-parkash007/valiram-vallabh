@@ -65,7 +65,7 @@ function BookModal({ book, onClose, isSd, lang }) {
         <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>{book.description}</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="btn-green" style={{ flex: 1, justifyContent: 'center' }}>
-            {isSd ? 'آن لائين پڙهو' : 'Read Online'}
+            {isSd ? 'آنلائن پڙهو' : 'Read Online'}
           </a>
         </div>
         <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 12, textAlign: 'center' }}>
@@ -109,9 +109,9 @@ export default function BooksPage() {
               { n: '10+', l: tx(t.books.statLangs, lang) },
               { n: '60+', l: tx(t.books.statYears, lang) },
             ].map(s => (
-              <div key={s.l} style={{ textAlign: 'center' }}>
+              <div key={s.l} style={{ textAlign: isSd ? 'right' : 'center', direction: isSd ? 'rtl' : 'ltr' }}>
                 <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, fontWeight: 800, color: '#C9943A' }}>{s.n}</div>
-                <div style={{ fontSize: 11, color: 'rgba(245,236,215,0.6)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{s.l}</div>
+                <div style={{ fontSize: isSd ? 14 : 11, color: 'rgba(245,236,215,0.6)', fontWeight: 600, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', lineHeight: isSd ? 1.8 : 1.4 }}>{s.l}</div>
               </div>
             ))}
           </div>
@@ -159,8 +159,11 @@ export default function BooksPage() {
       {/* Books Grid */}
       <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="container">
-          <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 24 }}>
-            {tx(t.books.showing, lang)} {filtered.length} {tx(t.books.of, lang)} {books.length} {tx(t.books.books, lang)}
+          <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 24, direction: isSd ? 'rtl' : 'ltr', fontFamily: isSd ? 'Lateef, serif' : 'inherit', fontSize: isSd ? 16 : 13 }}>
+            {isSd
+              ? `${filtered.length} مان ${books.length} ڪتاب ڏيکاريا پيا وڃن`
+              : `${tx(t.books.showing, lang)} ${filtered.length} ${tx(t.books.of, lang)} ${books.length} ${tx(t.books.books, lang)}`
+            }
           </p>
           {filtered.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '80px 0' }}>
