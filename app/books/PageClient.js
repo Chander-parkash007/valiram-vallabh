@@ -65,14 +65,11 @@ function BookModal({ book, onClose, isSd, lang }) {
         <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>{book.description}</p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="btn-green" style={{ flex: 1, justifyContent: 'center' }}>
-            {isSd ? 'آن لائين پڙهو (گوگل ڊرائيو)' : 'Read Online (Google Drive)'}
-          </a>
-          <a href="https://tinyurl.com/2p8bx2rn" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ flex: 1, justifyContent: 'center' }}>
-            {tx(t.books.sindhLib, lang)}
+            {isSd ? 'آن لائين پڙهو' : 'Read Online'}
           </a>
         </div>
         <p style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 12, textAlign: 'center' }}>
-          {tx(t.books.freeNote, lang)}
+          {isSd ? 'مفت پڙهو — ڪو اڪائونٽ ضروري ناهي.' : 'Free to read online. No account required.'}
         </p>
       </div>
     </div>
@@ -173,12 +170,13 @@ export default function BooksPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 24 }}>
               {filtered.map(book => (
                 <div key={book.id} className="card" style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: 0, padding: 0, overflow: 'hidden' }} onClick={() => setSelectedBook(book)}>
-                  <div style={{ position: 'relative', width: '100%', height: 220, background: 'var(--cream)', flexShrink: 0 }}>
+                  {/* Full book cover — proper aspect ratio for book covers (3:4) */}
+                  <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4', background: 'var(--cream)', flexShrink: 0, overflow: 'hidden' }}>
                     {book.coverImage ? (
-                      <Image src={book.coverImage} alt={book.titleEn} fill sizes="(max-width: 768px) 100vw, 320px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+                      <Image src={book.coverImage} alt={book.titleEn} fill sizes="(max-width: 768px) 100vw, 320px" style={{ objectFit: 'fill' }} />
                     ) : (
-                      <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, var(--terracotta), var(--gold))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <p style={{ fontFamily: 'Lateef, serif', fontSize: 22, color: '#fff', padding: 16, textAlign: 'center', direction: 'rtl' }}>{book.titleSd}</p>
+                      <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, var(--terracotta), var(--gold))', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+                        <p style={{ fontFamily: 'Lateef, serif', fontSize: 26, color: '#fff', textAlign: 'center', direction: 'rtl', lineHeight: 1.8 }}>{book.titleSd}</p>
                       </div>
                     )}
                     <div style={{ position: 'absolute', top: 10, left: 10 }}>
@@ -222,9 +220,6 @@ export default function BooksPage() {
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="https://tinyurl.com/2p8bx2rn" target="_blank" rel="noopener noreferrer" className="btn-primary">
               {isSd ? 'سنڌ ڊجيٽل لائبريري →' : 'Sindh Digital Library →'}
-            </a>
-            <a href={`https://drive.google.com/drive/folders/${DRIVE_FOLDER_ID}`} target="_blank" rel="noopener noreferrer" className="btn-outline">
-              {isSd ? 'گوگل ڊرائيو فولڊر' : 'Google Drive Folder'}
             </a>
           </div>
         </div>
