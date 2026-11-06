@@ -17,6 +17,7 @@ const pressItems = [
     type: 'Anniversary Notice',
     publicationUrl: 'https://www.dawn.com/news/1784850',
     description: 'Death anniversary notice published in Dawn newspaper. "As long as stories are told and thoughts take flight, your legacy will live on in every heart you touched." Announced the second Vali Ram Vallabh Memorial Lecture — Sindhi Language and the Art of Translation — on 15 November 2025 at Press Club Mithi, Tharparkar. Signed by Mrs. Hari Vallabh (Wife), Dr. Kamleshwer Lohana (Son), Dr. Pushpa Vallabh (Daughter), Gauri Vallabh (Daughter), grandchildren and family.',
+    descriptionSd: 'ڊان اخبار ۾ ٻي ورسي جو تعزيتي نوٽس. "جيستائين ڪهاڻيون ٻڌايون وينديون، توهان جو ورثو هر دل ۾ زنده رهندو." ٻيو ولي رام ولڀ يادگاري خطبو — سنڌي ٻولي ۽ ترجمي جو فن — 15 نومبر 2025ع، پريس ڪلب مٺي، ٿرپارڪر. دستخط: مسز هاري ولڀ (زوجه)، ڊاڪٽر ڪملشور لوهاڻو (پٽ)، ڊاڪٽر پشپا ولڀ (ڌيءَ)، گوري ولڀ (ڌيءَ)، پوٽا-پوٽيون ۽ خاندان.',
     featured: true,
   },
   {
@@ -31,6 +32,7 @@ const pressItems = [
     publicationUrl: null,
     author: 'Dr. Kamleshwer Lohana',
     description: 'Written by his son Dr. Kamleshwer Lohana on the 2nd death anniversary. Describes Vali Ram Vallabh\'s lifelong devotion to Sindhi language and literature — his translations, his role at Sindhology, his founding of Blue Angels Eden School, and the personal memories of a son who grew up surrounded by books. His translation "Dhariyo" (The Outsider by Albert Camus) is cited as a landmark work.',
+    descriptionSd: 'سندس پٽ ڊاڪٽر ڪملشور لوهاڻو پاران ٻي ورسي تي لکيو ويو. سنڌي ٻوليءَ ۽ ادب لاءِ ولي رام ولڀ جي عمر ڀر جي لگن — سندس ترجما، سنڌالاجي ۾ ڪردار، بلو اينجلز ايڊن اسڪول جي بنياد، ۽ ڪتابن جي ماحول ۾ پليل پٽ جون ذاتي يادون. سندس ترجمو "ڌاريو" (البرٽ ڪاميو جو ناول) هڪ تاريخي ڪارنامي طور ذڪر ڪيو ويو.',
     featured: true,
   },
   {
@@ -45,6 +47,7 @@ const pressItems = [
     publicationUrl: null,
     author: 'Dr. Kamleshwer Lohana',
     description: 'Published on the 3rd death anniversary. Dr. Kamleshwer Lohana writes a deeply personal tribute — describing the journey of memories, the annual memorial lecture series, the Vali Ram Vallabh Literary Society\'s work, and the ongoing effort to preserve his father\'s legacy through publications, conferences, and the Memorial Corner at Sindh Central Auditorium. Mentions his translations of Mahmoud Darwish, Albert Camus, Krishan Chander, and others.',
+    descriptionSd: 'ٽين ورسي تي شايع ٿيو. ڊاڪٽر ڪملشور لوهاڻو هڪ گہرو ذاتي خراج لکيو — يادن جو سفر، سالياني يادگاري خطبي، ولي رام ولڀ ادبي سوسائٽيءَ جو ڪم، ۽ سنڌ سينٽرل آڊيٽوريم ۾ ميموريل ڪارنر ذريعي پيءُ جي ورثي کي محفوظ ڪرڻ جون ڪوششون. محمود درويش، البرٽ ڪاميو، ڪرشن چندر ۽ ٻين جا ترجما ذڪر ڪيا.',
     featured: true,
   },
   {
@@ -59,6 +62,7 @@ const pressItems = [
     publicationUrl: null,
     author: 'Zulfiqar Halepoto (ذوالفقار هاليپوتو)',
     description: 'A long-form literary tribute by journalist and writer Zulfiqar Halepoto. Traces the complete literary journey of Vali Ram Vallabh — his childhood in Mithi, his education, his career at Forest Department, advertising, and Sindhology. Discusses his friendships with major Sindhi literary figures in Hyderabad including Amar Jalil, Siraj-ul-Haq, Hameed Sindhi, and others. Ends with song lyrics translated by Vali Ram Vallabh — Wanderer Chilga Dhinjo, Nandjo Restora, Harry Seng Pully, and Sindhi Aawaz Pattan.',
+    descriptionSd: 'صحافي ۽ اديب ذوالفقار هاليپوتو جو ڊگهو ادبي خراجِ عقيدت. ولي رام ولڀ جي مڪمل ادبي سفر جو جائزو — مٺيءَ ۾ ٻالپڻ، تعليم، جنگلات کاتو، اشتهاري ڪاروبار، ۽ سنڌالاجي. حيدرآباد جي نامور سنڌي ادبي شخصيتن سان دوستيون — امر جليل، سراج الحق، حميد سنڌي ۽ ٻين سان. ولي رام ولڀ پاران ترجمو ٿيل ڳيتن جي سٽن سان اختتام.',
     featured: true,
   },
   {
@@ -72,6 +76,7 @@ const pressItems = [
     type: 'Legacy',
     publicationUrl: null,
     description: 'Dr. Kamleshwer Lohana (son) standing beside the Vali Ram Vallabh Park board — a public park named in honour of Vali Ram Vallabh by the Sindhi Adabi Board and the Government of Sindh. The board displays the Sindhi Adabi Board flag, the map of Sindh, and the Government of Sindh seal.',
+    descriptionSd: 'ڊاڪٽر ڪملشور لوهاڻو (پٽ) ولي رام ولڀ پارڪ جي بورڊ جي اڳيان بيٺل — سنڌي ادبي بورڊ ۽ حڪومت سنڌ پاران ولي رام ولڀ جي اعزاز ۾ نالو ڏنل عوامي پارڪ. بورڊ تي سنڌي ادبي بورڊ جو پرچم، سنڌ جو نقشو، ۽ حڪومت سنڌ جي مهر.',
     featured: true,
   },
   {
@@ -98,6 +103,7 @@ const pressItems = [
     type: 'Magazine Feature',
     publicationUrl: null,
     description: 'Two-page feature (pp. 28–29) in Affair magazine on a literary gathering held in honour of Vali Ram Vallabh. Scholar Dilip Kothari presented a paper covering more than 40 books. Speakers included Dr. Manoj Kumar, Shankar Sagar, Dr. Anton Raaz, and Hamesh Kemani (Secretary, Sindhi Adabi). The gathering featured readings from his translations and discussions of his contribution to world literature in Sindhi.',
+    descriptionSd: 'افئير رسالي ۾ ولي رام ولڀ جي اعزاز ۾ ٿيل ادبي محفل تي ٻه صفحن جو فيچر (صفحا 28-29). عالم ديليپ ڪوٺاري 40 کان وڌيڪ ڪتابن تي مقالو پيش ڪيو. مقرر: ڊاڪٽر منوج ڪمار، شنڪر ساگر، ڊاڪٽر انٽون رازا، ۽ هاميش ڪيماڻي (سيڪريٽري، سنڌي ادبي). سندس ترجمن مان پڙهائپ ۽ عالمي ادب ۾ سندس حصي تي بحث.',
     featured: false,
   },
   {
@@ -112,6 +118,7 @@ const pressItems = [
     publicationUrl: null,
     author: 'Zubaida Mustafa',
     description: 'A profile article in Daily Dawn on the literary work of Vali Ram Vallabh, written by renowned journalist Zubaida Mustafa. Covers his translations, his role in bringing world literature to Sindhi readers, and his lasting contribution to Sindhi literary culture.',
+    descriptionSd: 'ڊيلي ڊان ۾ ولي رام ولڀ جي ادبي ڪم تي پروفائيل آرٽيڪل، مشهور صحافي زبيدا مصطفيٰ پاران لکيو. سندس ترجما، سنڌي پڙهندڙن کي عالمي ادب سان روشناس ڪرائڻ جو ڪردار، ۽ سنڌي ادبي ثقافت ۾ دائمي خدمتون.',
     featured: true,
   },
   {
@@ -125,6 +132,7 @@ const pressItems = [
     type: 'Literary Coverage',
     publicationUrl: null,
     description: 'Dawn newspaper coverage of Vali Ram Vallabh and his literary contributions to Sindhi language and literature.',
+    descriptionSd: 'ڊان اخبار ۾ ولي رام ولڀ ۽ سنڌي ٻوليءَ ۽ ادب ۾ سندس ادبي خدمتن جي ڪوريج.',
     featured: false,
   },
   {
@@ -138,6 +146,7 @@ const pressItems = [
     type: 'Event Coverage',
     publicationUrl: null,
     description: 'Press coverage of a literary gathering held in memory of Vali Ram Vallabh.',
+    descriptionSd: 'ولي رام ولڀ جي ياد ۾ ٿيل ادبي گڏجاڻيءَ جي پريس ڪوريج.',
     featured: false,
   },
   {
@@ -151,6 +160,7 @@ const pressItems = [
     type: 'Event Coverage',
     publicationUrl: null,
     description: 'Coverage of the 1st death anniversary lecture programme "ترجمي جي اهميت" (The Importance of Translation) — a tribute event organized by the Vali Ram Vallabh Literary Society. The programme featured prominent Sindhi scholars and writers discussing Vali Ram Vallabh\'s monumental contribution to translation and Sindhi literature.',
+    descriptionSd: 'پهريون يادگاري خطبي "ترجمي جي اهميت" جي ڪوريج — ولي رام ولڀ ادبي سوسائٽي پاران منظم ڪيل خراجِ عقيدت تقريب. نامور سنڌي عالمن ۽ ليکڪن ترجمي ۽ سنڌي ادب ۾ ولي رام ولڀ جي تاريخي خدمتن تي بحث ڪيو.',
     featured: true,
   },
   {
@@ -164,6 +174,7 @@ const pressItems = [
     type: 'Condolence Reference',
     publicationUrl: null,
     description: 'Condolence Reference organized by the Arts Council of Pakistan, Karachi — "In Recognition of the literary services of Author & Translator Vali Ram Vallabh (1941–2023)." Held on 29 December 2023 at the Arts Council, Karachi.',
+    descriptionSd: 'آرٽس ڪائونسل آف پاڪستان، ڪراچي پاران تعزيتي ريفرنس — "ليکڪ ۽ مترجم ولي رام ولڀ (1941-2023) جي ادبي خدمتن جي اعتراف ۾." 29 ڊسمبر 2023ع تي آرٽس ڪائونسل ڪراچي ۾ منظم ڪيو ويو.',
     featured: true,
   },
   {
@@ -177,6 +188,7 @@ const pressItems = [
     type: 'Literary Event',
     publicationUrl: null,
     description: 'Book launch poster for "مهورت جذبن جي تمورتي" (Broken Emotions) by Dr. Murli Dhar — organized by the Vali Ram Vallabh Literary Society. Speakers included Amarsandho, Anita Kamleshwer, Pushpa Vallabh, Dr. Pushpa Ochani, Dr. Jameel Jotiyo, Dr. Hameed Somro, Zeb Sindi, Shabnam Gul, Dr. Irfan Mallah, Dr. Ali Murtaza Darijo, Dr. Kamleshwer, Medam Mehtab Akbar Rashdi, Prof. Muhammad Hashim Solangi, and Dr. Nazir Mahmood.',
+    descriptionSd: 'ڊاڪٽر مرلي ڌر جي ڪتاب "جذبن جي تمورتي" جي مهوت پوسٽر — ولي رام ولڀ ادبي سوسائٽي پاران منظم ڪيو ويو. مقرر: امرسنڌو، انيتا ڪملشور، پشپا ولڀ، ڊاڪٽر پشپا اوچاڻي، ڊاڪٽر جميل جوتيو، ڊاڪٽر حميد سومرو، زيب سنڌي، شبنم گل، ڊاڪٽر عرفان ملاح، ڊاڪٽر ڪملشور، ميڊم مهتاب اڪبر رشدي، پروفيسر محمد هاشم سولنگي، ڊاڪٽر نذير محمود.',
     featured: false,
   },
   {
@@ -190,6 +202,7 @@ const pressItems = [
     type: 'Event Coverage',
     publicationUrl: null,
     description: 'News report of the book launch of Dr. Murli Dhar\'s Sindhi, Urdu and English books — a joint launch event organized by the Vali Ram Vallabh Literary Society at the Sindhi Autonomous Institute, Hyderabad. The event was chaired by Dr. Baloch and highlighted Vali Ram Vallabh\'s enduring legacy through the literary society that continues his work.',
+    descriptionSd: 'ڊاڪٽر مرلي ڌر جي سنڌي، اردو ۽ انگريزيءَ ۾ ڪتابن جي گڏيل مهوت جي خبر — ولي رام ولڀ ادبي سوسائٽي پاران سنڌي خودمختيار انسٽيٽيوٽ، حيدرآباد ۾ منظم ڪيو ويو. تقريب جي صدارت ڊاڪٽر بلوچ ڪئي، ۽ ولي رام ولڀ جي دائمي ورثي تي روشني وڌي.',
     featured: false,
   },
   {
@@ -221,6 +234,7 @@ const pressItems = [
     type: 'Special Issue',
     publicationUrl: null,
     description: 'Kawish Dunya special issue (5 Nov 2023) featuring Vali Ram Vallabh on the front cover alongside Gaza coverage. The issue includes: "غزه جو درد ۽ دنيا" (Gaza\'s Pain and the World) — full article by Vali Ram Vallabh. Literary tributes: "جن حيدرآباد ٿي ويو" (When Hyderabad Became) by Naseer Mirza; "ولي رام ولپ: نفيس ماٿو، مانائتو ليکڪ" (A Refined Mind, A Worthy Writer) by Mumtaz Meher (with photo by Abro Khuda Bux); "سنڌلاجي، ولي رام ولپ ۽ مان" (Sindhology, Vali Ram Vallabh and I) by Saeed Mangi.',
+    descriptionSd: 'ڪاوش دنيا خاص شمارو (5 نومبر 2023ع) — ولي رام ولڀ سرورق تي غزه ڪوريج سان. مضمون: "غزه جو درد ۽ دنيا" (ولي رام ولڀ). خراج: "جن حيدرآباد ٿي ويو" (نصير مرزا)، "نفيس ماٿو، مانائتو ليکڪ" (ممتاز مهر)، "سنڌالاجي، ولي رام ولڀ ۽ مان" (سعيد منگي).',
     featured: true,
   },
   {
@@ -242,6 +256,7 @@ const pressItems = [
     type: 'Memorial Issue',
     publicationUrl: null,
     description: 'A complete tribute issue of Imrata Magazine dedicated to Vali Ram Vallabh (1941–2023). Editor: Faqir Muhammad Dhol. Editorial Board: Manzoor Jokhio & Mithal Jiskani. Contents: "My Nanu… My Inspiration" (Rahul Chhabria, Grandson); "He wasn\'t like other Nanus" (Komal, Grand Daughter); "For Nanu…" (Sameer Rai Chhabria, Grandson); "Vali Ram Vallab" — poem by Dr. Ranomal Pryans; "همت ۽ حوصلي واري شخصيت" by Dr. Chandi Ram Shahani; "سنڌي ادب جو منفرد ليکڪ" by Saeed Mangi. Includes "The Memoirs" — a rare photo album featuring Vali Ram Vallabh with Ayaz Gul, Murad Ali Mirza, Ibrahim Joyo, Shaikh Ayaz, Taj Joyo, Imdad Hussaini, and other literary greats.',
+    descriptionSd: 'امراتا رسالي جو مڪمل خراجي شمارو ولي رام ولڀ (1941-2023) لاءِ وقف. مدير: فقير محمد ڍول. مواد: "منهنجو نانو... منهنجي حوصلي جو ذريعو" (راهل ڇابريا)، "نانو جهڙا ٻيا نه هئا" (ڪومل)، "نانو لاءِ..." (سمير راءِ ڇابريا)، ڊاڪٽر چندي رام شاهاڻي، سعيد منگي جا مضمون. نادر تصويري البم ۾ ولي رام ولڀ ۽ نامور ادبي شخصيتون.',
     featured: true,
   },
   {
@@ -263,6 +278,7 @@ const pressItems = [
     type: 'Profile Article',
     publicationUrl: null,
     description: 'A comprehensive 6-page Sindhi profile of Vali Ram Vallabh covering his complete literary output: 10 translated novels, 8 translated short story collections, 112 translated stories from 26 languages, poetry collections, 7 translated plays, research works, edited volumes, and a chronological list of 26 awards (1989–2015). Born 18 August 1941 in Mithi, he worked at the Forest Department, advertising, and the Institute of Sindhology. Translated from Tolstoy, Moravia, Krishan Chander, Amrita Pritam, Tagore, and others.',
+    descriptionSd: 'ولي رام ولڀ جو سنڌيءَ ۾ 6 صفحن تي مشتمل مڪمل پروفائيل: 10 ترجمو ٿيل ناول، 8 ڪهاڻيون، 26 ٻولين مان 112 ترجمو ٿيل ڪهاڻيون، شاعري، 7 ڊراما، تحقيقي ڪم، ادارتي جلد، ۽ 26 ايوارڊن جي تاريخي فهرست (1989-2015).',
     featured: false,
   },
   {
@@ -276,6 +292,7 @@ const pressItems = [
     type: 'Profile Article',
     publicationUrl: 'https://www.express.pk/story/2742353/walii-raam-walibh-ehad-saaz-adeeb-2742353',
     description: 'A detailed profile article on Express.pk about Vali Ram Vallabh — describing him as an epoch-making litterateur who transformed Sindhi literature through his translations and literary scholarship.',
+    descriptionSd: 'ايڪسپريس.pk تي ولي رام ولڀ بابت تفصيلي پروفائيل مضمون — هن کي هڪ دور ساز اديب طور بيان ڪيو ويو جنهن پنهنجي ترجمن ۽ ادبي علم سان سنڌي ادب کي بدلائي ڇڏيو.',
     featured: false,
   },
 ]
@@ -467,7 +484,7 @@ export default function PressPage() {
                   <h3 style={{ fontFamily: isSd && item.titleSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd && item.titleSd ? 20 : 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: isSd && item.titleSd ? 2 : 1.35, direction: isSd && item.titleSd ? 'rtl' : 'ltr' }}>
                     {isSd && item.titleSd ? item.titleSd : item.titleEn}
                   </h3>
-                  <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, flex: 1, marginBottom: 14, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+                  <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, flex: 1, marginBottom: 14, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr', textAlign: isSd ? 'right' : 'left' }}>
                     {isSd && item.descriptionSd ? item.descriptionSd : item.description}
                   </p>
                   <button
