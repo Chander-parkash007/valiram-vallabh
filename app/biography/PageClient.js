@@ -195,7 +195,8 @@ export default function BiographyPage() {
               </span>
             ))}
           </div>
-          <div style={{ position: 'relative' }}>
+          {/* Force LTR on wrapper so row-reverse works correctly regardless of page language */}
+          <div style={{ position: 'relative', direction: 'ltr' }}>
             {/* Line: right side in Sindhi, left side in English — always at 40px from its edge */}
             <div style={{
               position: 'absolute',
