@@ -336,7 +336,7 @@ body::before {
     padding-right: 0 !important;
   }
 
-  /* Right column — portrait */
+  /* Right column — portrait — no fades, pure blend via matching background */
   .hero-portrait-col {
     width: 50%;
     flex-shrink: 0;
@@ -348,32 +348,6 @@ body::before {
     background: #EAD8BC;
     overflow: hidden;
     position: relative;
-  }
-
-  /* Subtle bottom-edge fade so photo blends into the page below */
-  .hero-portrait-col::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 120px;
-    background: linear-gradient(to bottom, transparent 0%, #EAD8BC 100%);
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  /* Left-edge fade so photo blends into the text column */
-  .hero-portrait-col::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 80px;
-    background: linear-gradient(to right, #EAD8BC 0%, transparent 100%);
-    pointer-events: none;
-    z-index: 2;
   }
 
   .hero-portrait-col > div {
@@ -405,67 +379,176 @@ body::before {
   }
 }
 
-/* ── Global mobile improvements ─────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — Mobile first, then tablet, then desktop
+   ══════════════════════════════════════════════════════════════ */
 
-/* Mobile hero — portrait above text */
+/* ── Small mobile (< 480px) ─────────────────────────────────── */
+@media (max-width: 479px) {
+  .container { padding: 0 16px; }
+  .section { padding: 48px 0; }
+  .section-sm { padding: 32px 0; }
+  .page-hero { padding: 40px 0 32px; }
+
+  .section-title { font-size: 1.7rem; }
+
+  /* Hero */
+  .hero-portrait-col { height: 280px; order: 1; }
+  .hero-text-col { order: 2; padding: 24px 0 36px; }
+
+  /* Buttons always auto width in hero */
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline { width: auto !important; font-size: 13px; padding: 10px 16px; }
+
+  /* Cards smaller */
+  .card { padding: 16px; border-radius: 12px; }
+
+  /* Prevent text overflow */
+  h1, h2, h3 { word-break: break-word; }
+}
+
+/* ── Mobile (480px – 767px) ──────────────────────────────────── */
 @media (max-width: 767px) {
   .section { padding: 56px 0; }
   .section-sm { padding: 36px 0; }
+  .container { padding: 0 16px; }
 
-  /* Hero portrait on mobile — show as a tall banner */
+  /* Hero: portrait on top, text below */
   .hero-portrait-col {
-    width: 100%;
-    height: 380px;
-    order: 1;
+    width: 100% !important;
+    height: 340px !important;
+    order: 1 !important;
+    flex-shrink: 0;
   }
-
   .hero-text-col {
-    order: 2;
-    padding: 32px 0 48px;
-    text-align: left;
+    order: 2 !important;
+    padding: 28px 0 40px !important;
+    flex: unset !important;
   }
 
-  /* Buttons full-width on very small screens */
-  .btn-primary, .btn-outline, .btn-green, .btn-gold {
+  /* Full-width btns (non-hero) */
+  .btn-primary:not(.hero-btns .btn-primary),
+  .btn-outline:not(.hero-btns .btn-outline),
+  .btn-green:not(.hero-btns .btn-green),
+  .btn-gold:not(.hero-btns .btn-gold) {
     width: 100%;
     justify-content: center;
     text-align: center;
   }
 
-  /* Cards stack nicely */
-  .card { padding: 18px; }
+  .card { padding: 16px; }
 
-  /* Navbar logo smaller */
-  .container { padding: 0 16px; }
+  /* Videos: iframes need max-height on small screens */
+  iframe { max-height: 240px; }
 
-  /* Timeline legend items left-aligned on mobile */
-  .timeline-legend { justify-content: flex-start !important; }
+  /* Press cards: single column */
+  .press-grid { grid-template-columns: 1fr !important; }
+
+  /* Awards list items */
+  .awards-list-item { flex-wrap: wrap; }
+
+  /* Gallery: 2 columns instead of 4 */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Page hero text */
+  .page-hero h1 { font-size: clamp(1.8rem, 7vw, 2.4rem) !important; }
+  .page-hero p { font-size: 15px !important; }
+
+  /* Navbar */
+  .nav-desktop { display: none !important; }
+  .nav-mobile-btn { display: flex !important; }
 }
 
+/* ── Tablet (768px – 1023px) ─────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-portrait-col { width: 45%; }
+  .hero-text-col { padding: 28px 32px 40px 0; }
+
+  .btn-primary, .btn-outline, .btn-green, .btn-gold { width: auto; }
+
+  iframe { max-height: 300px; }
+}
+
+/* ── Desktop (≥ 768px) ───────────────────────────────────────── */
 @media (min-width: 768px) {
-  .btn-primary, .btn-outline, .btn-green, .btn-gold {
-    width: auto;
-  }
+  .section { padding: 100px 0; }
+  .btn-primary, .btn-outline, .btn-green, .btn-gold { width: auto; }
 }
 
-/* Touch-friendly tap targets */
+/* ── Touch devices — remove hover effects ────────────────────── */
 @media (hover: none) {
   .card:hover {
     transform: none;
     box-shadow: 0 2px 8px var(--shadow);
   }
-  .btn-primary:hover, .btn-outline:hover, .btn-green:hover {
+  .btn-primary:hover, .btn-outline:hover, .btn-green:hover, .btn-gold:hover {
     transform: none;
   }
 }
 
-/* Hero buttons — side by side always, no width:100% override */
+/* ── Hero buttons — always side by side ──────────────────────── */
 .hero-btns {
   flex-direction: row !important;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .hero-btns .btn-primary,
 .hero-btns .btn-outline {
   width: auto !important;
   flex: 0 0 auto;
+}
+
+/* ── Press page responsive ───────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Press featured cards: single column, proper aspect ratio */
+  [style*="minmax(320px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Lightbox on mobile */
+  [style*="zIndex: 9999"] div {
+    padding: 10px !important;
+  }
+}
+
+/* ── Videos page responsive ──────────────────────────────────── */
+@media (max-width: 767px) {
+  /* YouTube/Facebook embed grids: single column */
+  [style*="minmax(340px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Featured video max height */
+  [style*="paddingBottom: '56.25%'"] {
+    max-height: 220px;
+  }
+}
+
+/* ── Books grid responsive ───────────────────────────────────── */
+@media (max-width: 639px) {
+  [style*="minmax(280px, 1fr)"],
+  [style*="minmax(290px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Awards grid responsive ──────────────────────────────────── */
+@media (max-width: 639px) {
+  [style*="minmax(300px, 1fr)"],
+  [style*="minmax(260px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Gallery grid responsive ─────────────────────────────────── */
+@media (max-width: 639px) {
+  [style*="minmax(240px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ── Navbar responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav-desktop { display: none !important; }
+  .nav-mobile-btn { display: flex !important; }
 }

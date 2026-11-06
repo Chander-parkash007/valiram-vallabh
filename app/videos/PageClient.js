@@ -97,7 +97,7 @@ export default function VideosPage() {
             <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.5rem,3vw,2.2rem)', color: '#F5ECD7', marginBottom: 32 }}>
               {tx(t.videos.mustTitle, lang)}
             </h2>
-            <div style={{ maxWidth: 860, margin: '0 auto' }}>
+            <div style={{ maxWidth: 860, margin: '0 auto', width: '100%' }}>
               <div style={{ borderRadius: 16, overflow: 'hidden', boxShadow: '0 24px 64px rgba(0,0,0,0.5)' }}>
                 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                   <iframe src={`https://www.youtube.com/embed/${featuredYT.embedId}?rel=0`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title={featuredYT.titleEn} />
@@ -121,7 +121,7 @@ export default function VideosPage() {
         <div className="container">
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.videos.ytTag, lang)}</div>
           <h2 className="section-title" style={{ marginBottom: 32 }}>{tx(t.videos.ytTitle, lang)}</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: 20 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
             {youtubeVideos.map(v => <YouTubeEmbed key={v.id} video={v} isSd={isSd} />)}
           </div>
         </div>
@@ -132,8 +132,8 @@ export default function VideosPage() {
         <div className="container">
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.videos.fbTag, lang)}</div>
           <h2 className="section-title" style={{ marginBottom: 12 }}>{tx(t.videos.fbTitle, lang)}</h2>
-          <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 32 }}>{tx(t.videos.fbNote, lang)}</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: 20 }}>
+          <p style={{ fontSize: isSd ? 16 : 14, color: 'var(--text-muted)', marginBottom: 32, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{tx(t.videos.fbNote, lang)}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
             {facebookVideos.map(v => <FacebookEmbed key={v.id} video={v} />)}
           </div>
         </div>

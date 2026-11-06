@@ -196,20 +196,20 @@ export default function BiographyPage() {
             ))}
           </div>
           <div style={{ position: 'relative' }}>
-            {/* Vertical line — left in English, right in Sindhi */}
-            <div style={{ position: 'absolute', [isSd ? 'right' : 'left']: 40, top: 0, bottom: 0, width: 2, background: 'var(--border)' }} />
+            {/* Vertical line — always on left at position 40 */}
+            <div style={{ position: 'absolute', left: 40, top: 0, bottom: 0, width: 2, background: 'var(--border)' }} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {timeline.map((item, i) => {
                 const c = typeColors[item.type]
                 return (
-                  <div key={i} style={{ display: 'flex', flexDirection: isSd ? 'row-reverse' : 'row', gap: 20, paddingBottom: 28, position: 'relative' }}>
-                    {/* Dot column */}
+                  <div key={i} style={{ display: 'flex', flexDirection: 'row', gap: 20, paddingBottom: 28, position: 'relative' }}>
+                    {/* Dot column — always left */}
                     <div style={{ position: 'relative', zIndex: 1, flexShrink: 0, width: 80, display: 'flex', justifyContent: 'center', paddingTop: 2 }}>
                       <div style={{ width: 12, height: 12, borderRadius: '50%', background: c.dot, border: '2px solid var(--bg)', boxShadow: `0 0 0 2px ${c.dot}`, marginTop: 4 }} />
                     </div>
-                    {/* Content */}
-                    <div style={{ flex: 1, paddingTop: 0, textAlign: isSd ? 'right' : 'left' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap', flexDirection: isSd ? 'row-reverse' : 'row' }}>
+                    {/* Content — text aligns right in Sindhi, left in English */}
+                    <div style={{ flex: 1, paddingTop: 0, textAlign: isSd ? 'right' : 'left', direction: isSd ? 'rtl' : 'ltr' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, flexWrap: 'wrap', justifyContent: isSd ? 'flex-end' : 'flex-start' }}>
                         <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot, direction: 'ltr', unicodeBidi: 'isolate' }}>{item.year}</span>
                         <span style={{ fontSize: isSd ? 13 : 10, padding: '2px 8px', borderRadius: 100, background: c.bg, color: c.dot, fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', border: `1px solid ${c.dot}30`, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                           {typeLabels[item.type]}

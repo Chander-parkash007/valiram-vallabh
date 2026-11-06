@@ -403,7 +403,7 @@ export default function PressPage() {
           <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>
             {tx(t.press.desc, lang)}
           </p>
-          <div style={{ display: 'flex', gap: 24, marginTop: 24, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 24, marginTop: 24, flexWrap: 'wrap', direction: 'ltr' }}>
             {[
               { n: '18', l: isSd ? 'اشاعتون' : 'Publications' },
               { n: '5',  l: isSd ? 'اخبارون' : 'Newspapers' },
@@ -431,7 +431,7 @@ export default function PressPage() {
           </h2>
           <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 36 }}>{tx(t.press.featuredDesc, lang)}</p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 24, marginBottom: 64 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 24, marginBottom: 64 }}>
             {featured.map(item => (
               <div key={item.id} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 20, overflow: 'hidden', boxShadow: '0 4px 16px var(--shadow)', display: 'flex', flexDirection: 'column' }}>
 
@@ -512,7 +512,7 @@ export default function PressPage() {
             }
           </h2>
           <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 32 }}>{tx(t.press.sindhiDesc, lang)}</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 20, marginBottom: 64 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 20, marginBottom: 64 }}>
             {sindhiCards.map(card => (
               <div key={card.id} style={{
                 background: card.type === 'verse' ? 'rgba(201,148,58,0.04)' : 'var(--bg-card)',
@@ -539,7 +539,7 @@ export default function PressPage() {
             <>
               <div className="tag" style={{ marginBottom: 12, display: 'inline-flex' }}>{tx(t.press.moreTag, lang)}</div>
               <h2 className="section-title" style={{ marginBottom: 32 }}>{tx(t.press.moreH2, lang)}</h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 20 }}>
                 {rest.map(item => (
                   <div key={item.id} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
                     {item.image ? (
