@@ -31,18 +31,6 @@ export const metadata = {
   description:
     'Official tribute website of Vali Ram Vallabh (1941–2023) — Pride of Performance Award laureate, Sindhi literary scholar, and translator of over 90 works from world literature into Sindhi. Born Mithi, Tharparkar.',
 
-  icons: {
-    icon: [
-      { url: '/favicon.png', sizes: '512x512', type: 'image/png' },
-      { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
-    ],
-    shortcut: '/favicon.png',
-    apple: [
-      { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
-    ],
-  },
-
   keywords: [
     // Primary name variants (how people actually search)
     'Vali Ram Vallabh',
