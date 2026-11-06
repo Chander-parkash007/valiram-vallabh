@@ -196,16 +196,35 @@ export default function BiographyPage() {
             ))}
           </div>
           <div style={{ position: 'relative' }}>
-            {/* Vertical line — always left at 40px */}
-            <div style={{ position: 'absolute', left: 40, top: 0, bottom: 0, width: 2, background: 'var(--border)' }} />
+            {/* Vertical line — right side in Sindhi, left side in English */}
+            <div style={{
+              position: 'absolute',
+              [isSd ? 'right' : 'left']: 40,
+              top: 0, bottom: 0, width: 2,
+              background: 'var(--border)',
+            }} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {timeline.map((item, i) => {
                 const c = typeColors[item.type]
                 return (
-                  <div key={i} style={{ display: 'flex', flexDirection: 'row', gap: 20, paddingBottom: 28, position: 'relative' }}>
-                    {/* Dot column — always left, aligned with the vertical line */}
-                    <div style={{ position: 'relative', zIndex: 1, flexShrink: 0, width: 80, display: 'flex', justifyContent: 'center', paddingTop: 6 }}>
-                      <div style={{ width: 12, height: 12, borderRadius: '50%', background: c.dot, border: '2px solid var(--bg)', boxShadow: `0 0 0 2px ${c.dot}` }} />
+                  <div key={i} style={{
+                    display: 'flex',
+                    flexDirection: isSd ? 'row-reverse' : 'row',
+                    gap: 20,
+                    paddingBottom: 28,
+                    position: 'relative',
+                  }}>
+                    {/* Dot column — 80px wide, dot centered at position 40 from its side */}
+                    <div style={{
+                      position: 'relative', zIndex: 1, flexShrink: 0, width: 80,
+                      display: 'flex', justifyContent: 'center', paddingTop: 6,
+                    }}>
+                      <div style={{
+                        width: 12, height: 12, borderRadius: '50%',
+                        background: c.dot,
+                        border: '2px solid var(--bg)',
+                        boxShadow: `0 0 0 2px ${c.dot}`,
+                      }} />
                     </div>
                     {/* Content box */}
                     <div style={{
@@ -215,7 +234,7 @@ export default function BiographyPage() {
                       borderRadius: 10,
                       padding: '12px 16px',
                     }}>
-                      {/* Year + type — right-aligned in Sindhi, left in English */}
+                      {/* Year + type label */}
                       <div style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -226,7 +245,9 @@ export default function BiographyPage() {
                         direction: 'ltr',
                       }}>
                         {!isSd && (
-                          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot, unicodeBidi: 'isolate' }}>{item.year}</span>
+                          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot, unicodeBidi: 'isolate' }}>
+                            {item.year}
+                          </span>
                         )}
                         <span style={{
                           fontSize: isSd ? 13 : 10, padding: '2px 8px', borderRadius: 100,
@@ -239,7 +260,9 @@ export default function BiographyPage() {
                           {typeLabels[item.type]}
                         </span>
                         {isSd && (
-                          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot, direction: 'ltr', unicodeBidi: 'isolate' }}>{item.year}</span>
+                          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot, direction: 'ltr', unicodeBidi: 'isolate' }}>
+                            {item.year}
+                          </span>
                         )}
                       </div>
                       {/* Event text */}
