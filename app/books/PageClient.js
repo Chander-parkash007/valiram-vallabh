@@ -110,7 +110,7 @@ export default function BooksPage() {
               { n: '60+', l: tx(t.books.statYears, lang) },
             ].map(s => (
               <div key={s.l} style={{ textAlign: isSd ? 'right' : 'center', direction: isSd ? 'rtl' : 'ltr' }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, fontWeight: 800, color: '#C9943A' }}>{s.n}</div>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, fontWeight: 800, color: '#C9943A', direction: 'ltr', unicodeBidi: 'isolate' }}>{s.n}</div>
                 <div style={{ fontSize: isSd ? 14 : 11, color: 'rgba(245,236,215,0.6)', fontWeight: 600, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', lineHeight: isSd ? 1.8 : 1.4 }}>{s.l}</div>
               </div>
             ))}

@@ -507,7 +507,8 @@ export default function PressPage() {
                 borderRadius: 16, padding: '20px',
               }}>
                 <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: card.type === 'verse' ? 'var(--gold)' : 'var(--terracotta)', marginBottom: 12 }}>
-                  {card.type === 'verse' ? 'شعر' : 'نثر'} · {card.titleEn}
+                  {isSd ? (card.type === 'verse' ? 'شعر' : 'نثر') : (card.type === 'verse' ? 'Verse' : 'Prose')}
+                  {!isSd && ` · ${card.titleEn}`}
                 </p>
                 <p style={{ fontFamily: 'Lateef, serif', fontSize: card.type === 'verse' ? 18 : 15, color: 'var(--text-primary)', direction: 'rtl', textAlign: 'right', lineHeight: 2.1, whiteSpace: 'pre-line', marginBottom: 14 }}>
                   {card.textSd}
@@ -552,26 +553,31 @@ export default function PressPage() {
                           <line x1="16" y1="17" x2="8" y2="17"/>
                           <polyline points="10 9 9 9 8 9"/>
                         </svg>
-                        <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Online Article</span>
+                        <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                          {isSd ? 'آنلائن مضمون' : 'Online Article'}
+                        </span>
                       </div>
                     )}
                     <div style={{ padding: '16px 18px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, flexWrap: 'wrap', gap: 4 }}>
                         <span style={{ fontSize: 11, fontWeight: 700, color: typeColors[item.type] || 'var(--terracotta)' }}>{item.publication}</span>
-                        <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>{item.date}</span>
-                      </div>
-                      <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 15, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: 1.3 }}>{item.titleEn}</h3>
-                      {item.titleSd && (
+                        <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>{item.date}</span>                      </div>
+                      <h3 style={{ fontFamily: isSd && item.titleSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd && item.titleSd ? 18 : 15, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: isSd && item.titleSd ? 2 : 1.3, direction: isSd && item.titleSd ? 'rtl' : 'ltr' }}>
+                        {isSd && item.titleSd ? item.titleSd : item.titleEn}
+                      </h3>
+                      {!isSd && item.titleSd && (
                         <p style={{ fontFamily: 'Lateef, serif', fontSize: 13, color: 'var(--terracotta)', direction: 'rtl', textAlign: 'right', marginBottom: 8, lineHeight: 1.8 }}>{item.titleSd}</p>
                       )}
-                      <p style={{ fontSize: 12, color: 'var(--text-secondary)', lineHeight: 1.65, flex: 1, marginBottom: 12 }}>{item.description}</p>
+                      <p style={{ fontSize: isSd ? 15 : 12, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.65, flex: 1, marginBottom: 12, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+                        {isSd && item.descriptionSd ? item.descriptionSd : item.description}
+                      </p>
                       {item.image ? (
                         <button onClick={() => openLightbox(item)} className="btn-outline" style={{ width: '100%', justifyContent: 'center', fontSize: 11, padding: '7px 14px' }}>
                           {tx(t.press.openImg, lang)}
                         </button>
                       ) : item.publicationUrl ? (
                         <a href={item.publicationUrl} target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ width: '100%', justifyContent: 'center', fontSize: 11, padding: '7px 14px', textAlign: 'center', display: 'block' }}>
-                          {isSd ? 'آرٽيڪل پڙهو' : 'Read Article →'}
+                          {isSd ? 'آرٽيڪل پڙهو →' : 'Read Article →'}
                         </a>
                       ) : null}
                     </div>

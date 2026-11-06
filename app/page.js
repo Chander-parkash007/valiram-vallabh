@@ -54,12 +54,13 @@ export default function HomePage() {
 
             {/* Text */}
             <div className="hero-text-col">
-              <div className="tag" style={{ marginBottom: 20, display: 'inline-flex' }}>
+              <div style={{ direction: 'ltr', textAlign: isSd ? 'right' : 'left' }}>
+              <div className="tag" style={{ marginBottom: 20, display: 'inline-flex', alignSelf: isSd ? 'flex-end' : 'flex-start' }}>
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--terracotta)', animation: 'pulse 2s infinite', flexShrink: 0 }} />
                 {tx(t.home.tag, lang)}
               </div>
 
-              <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.4rem,5vw,5rem)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: 'var(--text-primary)', marginBottom: 14 }}>
+              <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.4rem,5vw,5rem)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: 'var(--text-primary)', marginBottom: 14, textAlign: isSd ? 'right' : 'left' }}>
                 <span style={{ background: 'linear-gradient(135deg, var(--terracotta), var(--gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                   {tx(t.home.title1, lang)}<br />{tx(t.home.title2, lang)}
                 </span>
@@ -69,23 +70,27 @@ export default function HomePage() {
                 ولي رام ولڀ
               </p>
 
-              <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 4, fontWeight: 500 }}>
+              <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 4, fontWeight: 500, textAlign: isSd ? 'right' : 'left' }}>
                 {tx(t.home.bornDied, lang)}
               </p>
-              <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 28, letterSpacing: '0.02em' }}>
+              <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 28, letterSpacing: '0.02em', textAlign: isSd ? 'right' : 'left', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                 {tx(t.home.birthplace, lang)}
               </p>
 
               <blockquote style={{
-                borderLeft: '3px solid var(--gold)', paddingLeft: 16, marginBottom: 32,
+                borderLeft: isSd ? 'none' : '3px solid var(--gold)',
+                borderRight: isSd ? '3px solid var(--gold)' : 'none',
+                paddingLeft: isSd ? 0 : 16, paddingRight: isSd ? 16 : 0,
+                marginBottom: 32,
                 fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontStyle: isSd ? 'normal' : 'italic',
                 fontSize: isSd ? 20 : 15, color: 'var(--text-secondary)', lineHeight: isSd ? 2.2 : 1.75,
+                direction: isSd ? 'rtl' : 'ltr', textAlign: isSd ? 'right' : 'left',
               }}>
                 {isSd ? `"${person.quoteSd}"` : `"${person.quoteEn}"`}
               </blockquote>
 
               {/* Stats */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px 24px', marginBottom: 32 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px 24px', marginBottom: 32, direction: 'ltr' }}>
                 {[
                   { number: '90+', label: tx(t.home.statWorks, lang) },
                   { number: '35+', label: tx(t.home.statAwards, lang) },
@@ -93,7 +98,7 @@ export default function HomePage() {
                   { number: '60+', label: tx(t.home.statYears, lang) },
                 ].map(s => (
                   <div key={s.label}>
-                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 30, fontWeight: 800, color: 'var(--terracotta)', lineHeight: 1 }}>
+                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 30, fontWeight: 800, color: 'var(--terracotta)', lineHeight: 1, direction: 'ltr', unicodeBidi: 'isolate' }}>
                       {s.number}
                     </div>
                     <div style={{ fontSize: isSd ? 14 : 10, color: 'var(--text-muted)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.08em', marginTop: 4, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
@@ -107,7 +112,8 @@ export default function HomePage() {
                 <Link href="/biography" className="btn-primary" style={{ justifyContent: 'center', textAlign: 'center' }}>{tx(t.home.btnBio, lang)}</Link>
                 <Link href="/books" className="btn-outline" style={{ justifyContent: 'center', textAlign: 'center' }}>{tx(t.home.btnBooks, lang)}</Link>
               </div>
-            </div>
+            </div>{/* close direction wrapper */}
+            </div>{/* close hero-text-col */}
 
           </div>
         </div>

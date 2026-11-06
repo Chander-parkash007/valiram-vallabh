@@ -57,7 +57,7 @@ export default function BiographyPage() {
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.bio.earlyTag, lang)}</div>
           <h2 className="section-title" style={{ marginBottom: 20 }}>
             {isSd
-              ? <span style={{ direction: 'rtl', display: 'block' }}>ٿرپارڪر جي دل ۾ ڄائو</span>
+              ? <span style={{ direction: 'rtl', display: 'block' }}>ٿرپارڪر جي سرزمين تي جنم</span>
               : <span>Born in the Heart of <span className="gradient-gold">Tharparkar</span></span>
             }
           </h2>
@@ -65,25 +65,25 @@ export default function BiographyPage() {
           <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? 'ولي رام ولڀ 18 آگسٽ 1941ع (سرڪاري رڪارڊ: 16 مارچ 1941ع) تي مٺي، ٿرپارڪر ضلعي، سنڌ، پاڪستان ۾ ڪيول رام لوهاڻو جي گهر ۾ پيدا ٿيو.'
+                ? 'ولي رام ولڀ 18 آگسٽ 1941ع (سرڪاري رڪارڊ موجب: 16 مارچ 1941ع) تي مٺي، ضلعي ٿرپارڪر، سنڌ، پاڪستان ۾ ڪيول رام لوهاڻو جي گهر ۾ جنم ورتو.'
                 : <>Vali Ram Vallabh was born on <strong>18 August 1941</strong> (official records: 16 March 1941) in <strong>Mithi, Tharparkar District, Sindh, Pakistan</strong> — a city that would later be known as a centre of learning and literature — at the home of <strong>Kewal Ram Lohana</strong>.</>
               }
             </p>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? 'هن کي 6 مئي 1947ع تي گورنمينٽ پرائمري اسڪول مٺي ۾ پهرين ڪلاس ۾ داخل ڪيو ويو. اسڪول جي سالن ۾ هن کتابن ۾ گهري دلچسپي پيدا ڪئي.'
+                ? '6 مئي 1947ع تي کيس گورنمينٽ پرائمري اسڪول مٺيءَ ۾ پهرين درجي ۾ داخل ڪرايو ويو. اسڪول جي زماني کان ئي کيس ڪتابن ۽ مطالعي سان گهري دلچسپي پيدا ٿي.'
                 : <>He was admitted to Government Primary School Mithi in Class 1 on 6 May 1947. During his school years, he developed a deep interest in books — the school reading room and library were under his care. Headmaster <strong>Lachman Das Parwani</strong> taught him English grammar and composition.</>
               }
             </p>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? 'هن پشڪارڻا برهمڻ پاٺشالا ۾ ديوناگري رسم الخط ۾ هندي پڙهي ۽ پنڊت سرنگرام شرما کان سنسڪرت سکي. هن ڪرڪيٽ ۽ فٽبال پڻ کيڏيو ۽ 1956ع ۾ تقرير مقابلي ۾ پهريون انعام حاصل ڪيو.'
+                ? 'هن پشڪارڻا برهمڻ پاٺشالا ۾ ديوناگري رسم الخط ذريعي هندي ٻوليءَ جي تعليم حاصل ڪئي ۽ پنڊت سرنگرام شرما کان سنسڪرت سکي. کيس ڪرڪيٽ ۽ فٽبال سان پڻ دلچسپي هئي. 1956ع ۾ تقريرن جي مقابلي ۾ پهريون انعام حاصل ڪيائين.'
                 : <>Beyond academics, he studied <strong>Hindi in Devanagari script</strong> from Pandit Punam Chand Sarmadi Brahman at the Pushkarana Brahman Pathshala, and learned <strong>Sanskrit</strong> from Pandit Sarngram Sharma. He also played cricket and football — winning first prize in the 1956 speech competition on "Duties of Students."</>
               }
             </p>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? '1956ع ۾ هن مٺي جي سماجي مصلح ڀڳت کيم چند اسناني سان رابطو قائم ڪيو. هن شيوا منڊلي ۽ لائبريري جو چيئرمين چونڊيو ويو — جيڪا 80 ميمبرن ۽ 350 ڪتابن واري نوجوانن جي تنظيم هئي. هن 1957ع ۾ اسردس ليکراج پرڌواناڻي جي ڌيءَ هاري سان شادي ڪئي.'
+                ? 'ساڳئي سال سندس ملاقات مٺيءَ جي سماجي مصلح ڀڳت کيم چند اسنانيءَ سان ٿي. کيس شيوا منڊلي ۽ ان جي لائبريريءَ جو چيئرمين چونڊيو ويو. اها نوجوانن جي هڪ تنظيم هئي، جنهن جا 80 ميمبر ۽ 350 ڪتابن تي مشتمل لائبريري هئي. 1957ع ۾ هن اسرداس ليکراج پرڌواناڻيءَ جي ڌيءَ هريءَ سان شادي ڪئي.'
                 : <>Around 1956 he came into contact with <strong>Bhagat Khem Chand Asnani</strong>, a social reformer of Mithi. Vali Ram was elected Chairman of the Shiva Mandali and Library — a youth organization with 80 members and 350 books. He married <strong>Hari</strong>, daughter of Isardas Lekhraj Pardhwanani, in Mithi in 1957.</>
               }
             </p>
@@ -96,7 +96,7 @@ export default function BiographyPage() {
         <div className="container" style={{ maxWidth: 860 }}>
           <div className="tag-green" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.bio.eduTag, lang)}</div>
           <h2 className="section-title" style={{ marginBottom: 32 }}>
-            {isSd ? 'علمي برتري — ' : 'Academic Excellence — '}<span className="gradient-green">{isSd ? 'هر ڀيرو پهريون درجو' : 'First Class, Every Time'}</span>
+            {isSd ? 'تعليمي ميدان ۾ نمايان ڪاميابي — ' : 'Academic Excellence — '}<span className="gradient-green">{isSd ? 'هر امتحان ۾ پهريون درجو' : 'First Class, Every Time'}</span>
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
             {eduCards.map((e, i) => (
@@ -125,25 +125,25 @@ export default function BiographyPage() {
         <div className="container" style={{ maxWidth: 860 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.bio.careerTag, lang)}</div>
           <h2 className="section-title" style={{ marginBottom: 20 }}>
-            {isSd ? 'وقف خدمت جا ' : 'Six Decades of '}<span className="gradient-gold">{isSd ? 'ڇهه ڏهاڪا' : 'Dedicated Service'}</span>
+            {isSd ? 'ڇهن ڏهاڪن تي پکڙيل ' : 'Six Decades of '}<span className="gradient-gold">{isSd ? 'پيشوراڻو سفر' : 'Dedicated Service'}</span>
           </h2>
           <div className="divider-gold" />
           <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? <>ولي رام ولڀ <strong>جنگل محڪمي</strong> ۾ 1959ع کان 1968ع تائين ڪم ڪيو. ان کانپوءِ تقريباً ويهه سالن تائين (1969ع–1988ع) هن ڪراچي جي هڪ اشتهاري ڪمپني جي حيدرآباد برانچ ۾ <strong>برانچ مئنيجر</strong> طور خدمتون ڏنيون.</>
+                ? <>ولي رام ولڀ 1959ع کان 1968ع تائين <strong>جهنگلات کاتي</strong> ۾ خدمتون سرانجام ڏنيون. ان کانپوءِ 1969ع کان 1988ع تائين ڪراچيءَ جي هڪ اشتهاري ڪمپنيءَ جي حيدرآباد شاخ ۾ <strong>برانچ مئنيجر</strong> طور ڪم ڪيائين.</>
                 : <>Vali Ram Vallabh worked in the <strong>Forest Department</strong> from 1959 to 1968. For about twenty years (1969–1988) he served as <strong>Branch Manager</strong> of the Hyderabad branch of a Karachi advertising company.</>
               }
             </p>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? <>1 اپريل 1988ع تي هن حيدرآباد ۾ <strong>بلو اينجلز ايڊن اسڪول</strong> قائم ڪيو — ڪنڊرگارٽن کان ڪلاس 8 تائين معياري تعليم فراهم ڪئي.</>
+                ? <>1 اپريل 1988ع تي هن حيدرآباد ۾ <strong>بلو اينجلز ايڊن اسڪول</strong> قائم ڪيو، جتي ڪنڊرگارٽن کان اٺين درجي تائين تعليم جو بندوبست ڪيو ويو.</>
                 : <>On 1 April 1988, he founded <strong>Blue Angels Eden School</strong> in Hussainabad, Hyderabad — providing quality education from Kindergarten to Class 8.</>
               }
             </p>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? <>اپريل 1988ع ۾ هن سنڌ يونيورسٽي جامشورو ۾ <strong>انسٽيٽيوٽ آف سنڌالاجي</strong> ۾ شموليت اختيار ڪئي. هن کي <strong>ڊپٽي ڊائريڪٽر، اينٿروپولاجيڪل سينٽر (ميوزيم)</strong> طور ترقي ملي ۽ 15 مارچ 2001ع تي رٽائر ٿيو.</>
+                ? <>اپريل 1988ع ۾ هن سنڌ يونيورسٽي، ڄامشوري جي <strong>انسٽيٽيوٽ آف سنڌالاجي</strong> ۾ خدمتون شروع ڪيون. اڳتي هلي کيس <strong>ڊپٽي ڊائريڪٽر، اينٿروپالاجيڪل سينٽر (ميوزيم)</strong> جي عهدي تي ترقي ملي. هن 15 مارچ 2001ع تي ملازمت تان رٽائرمينٽ ورتي.</>
                 : <>In April 1988 he joined the <strong>Institute of Sindhology</strong> at Sindh University, Jamshoro. He was promoted to <strong>Deputy Director, Anthropological Centre (Museum)</strong> and retired on 15 March 2001.</>
               }
             </p>
@@ -156,25 +156,25 @@ export default function BiographyPage() {
         <div className="container" style={{ maxWidth: 860 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.bio.litTag, lang)}</div>
           <h2 className="section-title" style={{ marginBottom: 20 }}>
-            {isSd ? 'دنيا کي ' : 'Bridging the World to '}<span className="gradient-gold">{isSd ? 'سنڌي پڙهندڙن سان ڳنڍڻ' : 'Sindhi Readers'}</span>
+            {isSd ? 'دنيا جي ادب کي ' : 'Bridging the World to '}<span className="gradient-gold">{isSd ? 'سنڌي پڙهندڙن تائين پهچائڻ' : 'Sindhi Readers'}</span>
           </h2>
           <div className="divider-gold" />
           <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? <>سندس پهريون ترجمو — گجراتيءَ مان "بهشت ائين دوزخ" — 1960ع ۾ <em>مهران</em> رسالي ۾ شايع ٿيو. اهو هڪ ادبي سفر جي شروعات هئي جيڪو 60 سالن کان وڌيڪ تي پکڙيل هو.</>
+                ? <>سندس پهريون ترجمو، گجراتي ٻوليءَ جي ڪتاب <strong>"بهشت ائين دوزخ"</strong> جو سنڌي ترجمو، 1960ع ۾ <em>مهراڻ</em> رسالي ۾ شايع ٿيو. اهو سندس ادبي سفر جي شروعات هئي، جيڪو 60 سالن کان وڌيڪ عرصي تائين جاري رهيو.</>
                 : <>His first translation — "Behisht Aeen Dozakh" from Gujarati — was published in the quarterly <em>Mehran</em> magazine in 1960. This began a literary journey spanning over 60 years.</>
               }
             </p>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? <>سندس مشهور ترين ترجمن ۾: <strong>غدار</strong> از ڪرشن چندر (4 ايڊيشن)، <strong>ڌاريو</strong> — البرٽ ڪامو جو سنڌي ترجمو (1993ع، مرزا قليچ بيگ ايوارڊ جو حاصلڪندڙ)، ۽ <strong>امرتا پريتم، قرۃالعين حيدر، ليو ٽالسٽاء</strong> ۽ ٻين جون تحريرون شامل آهن.</>
+                ? <>سندس اهم ترجمن ۾ ڪرشن چندر جو ناول <strong>"غدار"</strong> (4 ڇاپا)، البرٽ ڪاميو جو ناول <strong>"ڌاريو"</strong> (1993ع)، جنهن تي کيس مرزا قليچ بيگ ايوارڊ مليو، ۽ <strong>امرتا پريتم، قرۃالعين حيدر، ليو ٽالسٽاءِ</strong> سميت ٻين نامور ليکڪن جون تحريرون شامل آهن.</>
                 : <>Among his most celebrated translations: <strong>Ghadar</strong> by Krishan Chander (4 editions), <strong>Dhariyo</strong> — Sindhi translation of Albert Camus' "The Outsider" (1993, won the Mirza Qalich Baig Award), and works of <strong>Amrita Pritam, Qurratulain Hyder, Leo Tolstoy</strong> and many others.</>
               }
             </p>
             <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.85 }}>
               {isSd
-                ? <>هن اهم انتخاب پڻ گڏ ڪيا: <strong>ڪوٽا ڦلواري</strong> (19 ملڪن جي 26 ٻولين مان 112 شاعر)، <strong>مورچل</strong> (هندستاني شاعري)، ۽ پنج جلدي <strong>آرسي پبليڪيشن</strong> (1983ع–1986ع) جيڪا ظفر حسن واٽس سان گڏيل ايڊيٽنگ ڪئي.</>
+                ? <>هن ادبي چونڊن ۽ مجموعن جي ترتيب ۽ تدوين ۾ پڻ اهم ڪردار ادا ڪيو. انهن ۾ <strong>"ڪوٽا ڦلواري"</strong> (19 ملڪن جي 26 ٻولين جي 112 شاعرن جو ڪلام)، <strong>"مورچل"</strong> (هندستاني شاعريءَ جو مجموعو) ۽ <strong>"آرسي پبليڪيشن"</strong> جا پنج جلد (1983ع–1986ع) شامل آهن، جن جي ترتيب ۽ تدوين ۾ هن ظفر حسن واٽس سان گڏ ڪم ڪيو.</>
                 : <>He also compiled landmark anthologies: <strong>Kota Phulwari</strong> (112 poets from 26 languages of 19 countries), <strong>Morchal</strong> (Indian poetry collection), and the five-volume <strong>Arsi Publication</strong> (1983–1986) co-edited with Zafar Hassan Wats.</>
               }
             </p>
