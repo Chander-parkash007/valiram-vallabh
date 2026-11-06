@@ -31,10 +31,10 @@ export default function ContactPage() {
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>
             {tx(t.contact.tag, lang)}
           </div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em' }}>
             {tx(t.contact.title, lang)}
           </h1>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', maxWidth: 520 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 520, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>
             {tx(t.contact.desc, lang)}
           </p>
         </div>
@@ -43,10 +43,10 @@ export default function ContactPage() {
       {/* Memory banner */}
       <section style={{ background: 'var(--cream)', padding: '48px 0', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.5rem,3vw,2.2rem)', color: 'var(--text-primary)', marginBottom: 16 }}>
+          <h2 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(1.5rem,3vw,2.2rem)', color: 'var(--text-primary)', marginBottom: 16 }}>
             {tx(t.contact.memoryH2, lang)}
           </h2>
-          <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.8, maxWidth: 640, margin: '0 auto' }}>
+          <p style={{ fontSize: isSd ? 18 : 16, color: 'var(--text-secondary)', lineHeight: isSd ? 2.1 : 1.8, maxWidth: 640, margin: '0 auto', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
             {isSd
               ? 'پڙهندڙ، شاگرد، ساٿي، پاڙيسري يا دوست طور — جيڪڏهن سندس ترجمن توهان جي زندگي بدلائي، جيڪڏهن سندس تعليم توهان جي سوچ کي شڪل ڏني، جيڪڏهن توهان سندس سان گڏ هڪ لمحو گذاريو — اسان توهان کان ٻڌڻ چاهيون ٿا.'
               : 'As a reader, student, colleague, neighbour or friend — if his translations changed your life, if his teaching shaped your thinking, if you shared a moment with him — we would love to hear from you.'

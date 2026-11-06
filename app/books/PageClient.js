@@ -216,10 +216,10 @@ export default function BooksPage() {
       {/* More Books */}
       <section style={{ background: 'var(--cream)', padding: '40px 0' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: 700 }}>
-          <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 12 }}>
+          <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 26 : 22, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 12, direction: isSd ? 'rtl' : 'ltr' }}>
             {tx(t.books.moreTitle, lang)}
           </h3>
-          <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>
+          <p style={{ fontSize: isSd ? 17 : 14, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, marginBottom: 24, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
             {tx(t.books.moreDesc, lang)}
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>

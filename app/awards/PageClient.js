@@ -117,7 +117,8 @@ export default function AwardsPage() {
                 onClick={() => setActiveCategory(cat)}
                 style={{
                   padding: '6px 14px', borderRadius: 8, border: 'none', cursor: 'pointer',
-                  fontSize: 12, fontWeight: 600, fontFamily: 'Inter, sans-serif',
+                  fontSize: isSd ? 14 : 12, fontWeight: 600,
+                  fontFamily: isSd ? 'Lateef, serif' : 'Inter, sans-serif',
                   background: activeCategory === cat ? 'var(--terracotta)' : 'var(--bg-card)',
                   color: activeCategory === cat ? '#fff' : 'var(--text-muted)',
                   border: activeCategory === cat ? '1px solid var(--terracotta)' : '1px solid var(--border)',

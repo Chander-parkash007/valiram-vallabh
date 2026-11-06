@@ -13,10 +13,10 @@ export default function TributesPage() {
       <section className="page-hero">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>{tx(t.tributes.tag, lang)}</div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em' }}>
             {tx(t.tributes.title, lang)}
           </h1>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>
             {tx(t.tributes.desc, lang)}
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function TributesPage() {
                 <blockquote style={{ borderLeft: '3px solid var(--border)', paddingLeft: 20, fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontStyle: isSd ? 'normal' : 'italic', fontSize: isSd ? 18 : 16, color: 'var(--text-secondary)', lineHeight: isSd ? 2.2 : 1.8, marginBottom: 16 }}>
                   "{isSd && tribute.textSd ? tribute.textSd : tribute.textEn}"
                 </blockquote>
-                <p style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <p style={{ fontSize: isSd ? 14 : 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                   — {tribute.source}
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function TributesPage() {
       {/* Share a memory CTA */}
       <section style={{ background: 'linear-gradient(135deg, var(--terracotta), #6B2A1C)', padding: '60px 0' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: 600 }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, color: '#F5ECD7', marginBottom: 16 }}>
+          <h2 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 28, color: '#F5ECD7', marginBottom: 16 }}>
             {tx(t.tributes.shareH2, lang)}
           </h2>
           <p style={{ fontSize: 15, color: 'rgba(245,236,215,0.75)', lineHeight: 1.7, marginBottom: 28 }}>

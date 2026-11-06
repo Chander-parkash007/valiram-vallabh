@@ -157,7 +157,7 @@ export default function GalleryPage() {
     'Personal':  tx(t.gallery.catPersonal, lang),
     'Events':    tx(t.gallery.catEvents, lang),
     'Legacy':    tx(t.gallery.catLegacy, lang),
-    'Awards':    isSd ? 'ايوارڊ' : 'Awards',
+    'Awards':    tx(t.gallery.catAwards, lang),
     'Archive':   tx(t.gallery.catArchive, lang),
   }
 
@@ -172,10 +172,10 @@ export default function GalleryPage() {
       <section className="page-hero">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>{tx(t.gallery.tag, lang)}</div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em' }}>
             {tx(t.gallery.title, lang)}
           </h1>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', maxWidth: 500 }}>{tx(t.gallery.desc, lang)}</p>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 500, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>{tx(t.gallery.desc, lang)}</p>
         </div>
       </section>
 

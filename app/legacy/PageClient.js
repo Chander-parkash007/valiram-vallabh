@@ -13,10 +13,10 @@ export default function LegacyPage() {
       <section className="page-hero">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>{tx(t.legacy.tag, lang)}</div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em' }}>
             {tx(t.legacy.title, lang)}
           </h1>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>
             {tx(t.legacy.desc, lang)}
           </p>
         </div>
@@ -235,8 +235,8 @@ export default function LegacyPage() {
               { n: '5',   l: isSd ? 'آرسي رسالي جا جلد' : 'Volumes of Arsi Magazine' },
             ].map(s => (
               <div key={s.l} style={{ textAlign: 'center', padding: '20px 12px', background: 'rgba(255,255,255,0.04)', borderRadius: 12, border: '1px solid rgba(255,255,255,0.06)' }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 36, fontWeight: 800, color: '#C9943A', lineHeight: 1, marginBottom: 8 }}>{s.n}</div>
-                <div style={{ fontSize: 12, color: 'rgba(245,236,215,0.55)', lineHeight: 1.4 }}>{s.l}</div>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 36, fontWeight: 800, color: '#C9943A', lineHeight: 1, marginBottom: 8, direction: 'ltr', unicodeBidi: 'isolate' }}>{s.n}</div>
+                <div style={{ fontSize: isSd ? 14 : 12, color: 'rgba(245,236,215,0.55)', lineHeight: isSd ? 1.8 : 1.4, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{s.l}</div>
               </div>
             ))}
           </div>

@@ -394,7 +394,7 @@ export default function PressPage() {
               { n: '3+', l: isSd ? 'سال' : 'Years Covered' },
             ].map(s => (
               <div key={s.l} style={{ textAlign: isSd ? 'right' : 'center' }}>
-                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, fontWeight: 800, color: '#C9943A' }}>{s.n}</div>
+                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, fontWeight: 800, color: '#C9943A', direction: 'ltr', unicodeBidi: 'isolate' }}>{s.n}</div>
                 <div style={{ fontSize: isSd ? 14 : 11, color: 'rgba(245,236,215,0.6)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{s.l}</div>
               </div>
             ))}

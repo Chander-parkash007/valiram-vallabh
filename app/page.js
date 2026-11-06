@@ -65,7 +65,7 @@ export default function HomePage() {
                 </span>
               </h1>
 
-              <p style={{ fontFamily: 'Lateef, serif', fontSize: 24, color: 'var(--terracotta)', marginBottom: 16, lineHeight: 1.8, direction: 'rtl', textAlign: 'left' }}>
+              <p style={{ fontFamily: 'Lateef, serif', fontSize: 24, color: 'var(--terracotta)', marginBottom: 16, lineHeight: 1.8, direction: 'rtl', textAlign: 'right' }}>
                 ولي رام ولڀ
               </p>
 
@@ -126,10 +126,10 @@ export default function HomePage() {
                 </span>
               </h2>
               <div className="divider-gold" />
-              <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.85, marginTop: 20, marginBottom: 16 }}>
+              <p style={{ fontSize: isSd ? 17 : 15, color: 'var(--text-secondary)', lineHeight: isSd ? 2.1 : 1.85, marginTop: 20, marginBottom: 16, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                 {tx(t.home.para1, lang)}
               </p>
-              <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.85, marginBottom: 28 }}>
+              <p style={{ fontSize: isSd ? 17 : 15, color: 'var(--text-secondary)', lineHeight: isSd ? 2.1 : 1.85, marginBottom: 28, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                 {tx(t.home.para2, lang)}
               </p>
               <Link href="/biography" className="btn-primary">{tx(t.home.btnFullBio, lang)}</Link>
@@ -156,8 +156,8 @@ export default function HomePage() {
                 <div key={f.label} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 12, padding: '14px 18px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
                   <div style={{ width: 3, height: '100%', minHeight: 40, background: 'var(--gold)', borderRadius: 2, flexShrink: 0, marginTop: 2 }} />
                   <div>
-                    <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--terracotta)', marginBottom: 4 }}>{f.label}</p>
-                    <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.65 }}>{f.value}</p>
+                    <p style={{ fontSize: isSd ? 15 : 10, fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.08em', color: 'var(--terracotta)', marginBottom: 4, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{f.label}</p>
+                    <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.65, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{f.value}</p>
                   </div>
                 </div>
               ))}
@@ -197,7 +197,7 @@ export default function HomePage() {
                   {isSd && a.nameAward ? a.nameAward : a.nameEn}
                 </h3>
                 <p style={{ fontSize: isSd ? 15 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.8 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.organisation}</p>
-                {a.noteEn && <p style={{ fontSize: isSd ? 14 : 11, color: 'var(--gold)', marginTop: 8, fontWeight: 600, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{a.noteEn}</p>}
+                <p style={{ fontSize: isSd ? 14 : 11, color: 'var(--gold)', marginTop: 8, fontWeight: 600, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{isSd && a.noteSd ? a.noteSd : a.noteEn}</p>
               </div>
             ))}
           </div>

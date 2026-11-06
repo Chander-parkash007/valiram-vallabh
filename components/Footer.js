@@ -27,10 +27,10 @@ export default function Footer() {
             <p style={{ fontFamily: 'Lateef, serif', fontSize: 16, color: '#C9943A', direction: 'rtl', marginBottom: 12 }}>
               ولي رام ولڀ
             </p>
-            <p style={{ fontSize: 13, color: 'rgba(245,236,215,0.65)', lineHeight: 1.7, maxWidth: 280 }}>
+            <p style={{ fontSize: isSd ? 17 : 13, color: 'rgba(245,236,215,0.65)', lineHeight: isSd ? 2 : 1.7, maxWidth: 280, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
               {tx(t.footer.desc, lang)}
             </p>
-            <p style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic', fontSize: 13, color: '#C9943A', marginTop: 16, lineHeight: 1.6, maxWidth: 280 }}>
+            <p style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontStyle: isSd ? 'normal' : 'italic', fontSize: isSd ? 17 : 13, color: '#C9943A', marginTop: 16, lineHeight: isSd ? 2 : 1.6, maxWidth: 280, direction: isSd ? 'rtl' : 'ltr' }}>
               {isSd ? quoteSd : quoteEn}
             </p>
           </div>

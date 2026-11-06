@@ -42,10 +42,10 @@ export default function BiographyPage() {
       <section className="page-hero">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex', background: 'rgba(201,148,58,0.2)', borderColor: 'rgba(201,148,58,0.4)', color: '#E8B85A' }}>{tx(t.bio.pageTag, lang)}</div>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: '-0.03em' }}>
+          <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em' }}>
             {tx(t.bio.heroTitle, lang)}
           </h1>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 560, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>
             {tx(t.bio.heroDesc, lang)}
           </p>
         </div>
@@ -208,9 +208,9 @@ export default function BiographyPage() {
                     <div style={{ flex: 1, paddingTop: 0 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap' }}>
                         <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot }}>{item.year}</span>
-                        <span style={{ fontSize: 10, padding: '2px 8px', borderRadius: 100, background: c.bg, color: c.dot, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', border: `1px solid ${c.dot}30` }}>{typeLabels[item.type]}</span>
+                        <span style={{ fontSize: isSd ? 13 : 10, padding: '2px 8px', borderRadius: 100, background: c.bg, color: c.dot, fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', border: `1px solid ${c.dot}30`, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{typeLabels[item.type]}</span>
                       </div>
-                      <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7 }}>{isSd && item.eventSd ? item.eventSd : item.event}</p>
+                      <p style={{ fontSize: isSd ? 16 : 14, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{isSd && item.eventSd ? item.eventSd : item.event}</p>
                     </div>
                   </div>
                 )
@@ -228,9 +228,11 @@ export default function BiographyPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
             {family.map((m, i) => (
               <div key={i} className="card" style={{ padding: '14px 18px' }}>
-                <p style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)', marginBottom: 2 }}>{m.nameEn}</p>
-                <p style={{ fontSize: 11, color: 'var(--terracotta)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>{m.relation}</p>
-                {m.noteEn && <p style={{ fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.5 }}>{isSd && m.noteSd ? m.noteSd : m.noteEn}</p>}
+                <p style={{ fontWeight: 700, fontSize: isSd ? 16 : 14, color: 'var(--text-primary)', marginBottom: 2, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 1.8 : 1.3 }}>{m.nameEn}</p>
+                <p style={{ fontSize: isSd ? 13 : 11, color: 'var(--terracotta)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', marginBottom: 6, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                  {isSd && m.roleSd ? m.roleSd : m.relation}
+                </p>
+                {m.noteEn && <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.9 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{isSd && m.noteSd ? m.noteSd : m.noteEn}</p>}
               </div>
             ))}
           </div>
@@ -240,10 +242,10 @@ export default function BiographyPage() {
       {/* Passing */}
       <section className="section" style={{ background: '#2C1810' }}>
         <div className="container" style={{ maxWidth: 760, textAlign: 'center' }}>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.6rem,4vw,2.5rem)', color: '#F5ECD7', marginBottom: 16 }}>
+          <h2 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(1.6rem,4vw,2.5rem)', color: '#F5ECD7', marginBottom: 16, direction: isSd ? 'rtl' : 'ltr' }}>
             {isSd ? '29 آڪٽوبر 2023ع' : '29 October 2023'}
           </h2>
-          <p style={{ fontSize: 16, color: 'rgba(245,236,215,0.75)', lineHeight: 1.8, marginBottom: 24 }}>
+          <p style={{ fontSize: isSd ? 18 : 16, color: 'rgba(245,236,215,0.75)', lineHeight: isSd ? 2.2 : 1.8, marginBottom: 24, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
             {isSd
               ? 'ولي رام ولڀ 29 آڪٽوبر 2023ع تي ذيابيطس، گردن جي ناڪامي، ۽ دل جي پيچيدگين سبب ڪراچي جي هڪ اسپتال ۾ 82 سالن جي عمر ۾ وفات ڪئي. سندس آخري رسمون حيدرآباد ۾ جيٺانيان شمشان گهاٽ تي ادا ڪيون ويون.'
               : 'Vali Ram Vallabh passed away in a Karachi hospital on 29 October 2023, aged 82, after suffering from diabetes, kidney failure, and cardiac complications. His last rites were performed at Jethaniyan Shamshan Ghat, Hussainabad, Hyderabad.'
