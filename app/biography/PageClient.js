@@ -186,31 +186,38 @@ export default function BiographyPage() {
       <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="container" style={{ maxWidth: 860 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.bio.timelineTag, lang)}</div>
-          <h2 className="section-title" style={{ marginBottom: 12 }}>{tx(t.bio.timelineH2, lang)}</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 40 }}>
+          <h2 className="section-title" style={{ marginBottom: 12, fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', direction: isSd ? 'rtl' : 'ltr', textAlign: isSd ? 'right' : 'left' }}>{tx(t.bio.timelineH2, lang)}</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 40, justifyContent: 'flex-start' }}>
             {Object.entries(typeLabels).map(([type, label]) => (
-              <span key={type} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11, fontWeight: 600, color: typeColors[type].dot }}>
+              <span key={type} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: isSd ? 14 : 11, fontWeight: 600, color: typeColors[type].dot, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
                 <span style={{ width: 8, height: 8, borderRadius: '50%', background: typeColors[type].dot, flexShrink: 0 }} />
                 {label}
               </span>
             ))}
           </div>
           <div style={{ position: 'relative' }}>
-            <div style={{ position: 'absolute', left: 40, top: 0, bottom: 0, width: 2, background: 'var(--border)' }} />
+            {/* Vertical line — left in English, right in Sindhi */}
+            <div style={{ position: 'absolute', [isSd ? 'right' : 'left']: 40, top: 0, bottom: 0, width: 2, background: 'var(--border)' }} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {timeline.map((item, i) => {
                 const c = typeColors[item.type]
                 return (
-                  <div key={i} style={{ display: 'flex', gap: 20, paddingBottom: 28, position: 'relative' }}>
+                  <div key={i} style={{ display: 'flex', flexDirection: isSd ? 'row-reverse' : 'row', gap: 20, paddingBottom: 28, position: 'relative' }}>
+                    {/* Dot column */}
                     <div style={{ position: 'relative', zIndex: 1, flexShrink: 0, width: 80, display: 'flex', justifyContent: 'center', paddingTop: 2 }}>
                       <div style={{ width: 12, height: 12, borderRadius: '50%', background: c.dot, border: '2px solid var(--bg)', boxShadow: `0 0 0 2px ${c.dot}`, marginTop: 4 }} />
                     </div>
-                    <div style={{ flex: 1, paddingTop: 0 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap' }}>
-                        <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot }}>{item.year}</span>
-                        <span style={{ fontSize: isSd ? 13 : 10, padding: '2px 8px', borderRadius: 100, background: c.bg, color: c.dot, fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', border: `1px solid ${c.dot}30`, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{typeLabels[item.type]}</span>
+                    {/* Content */}
+                    <div style={{ flex: 1, paddingTop: 0, textAlign: isSd ? 'right' : 'left' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap', flexDirection: isSd ? 'row-reverse' : 'row' }}>
+                        <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot, direction: 'ltr', unicodeBidi: 'isolate' }}>{item.year}</span>
+                        <span style={{ fontSize: isSd ? 13 : 10, padding: '2px 8px', borderRadius: 100, background: c.bg, color: c.dot, fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', border: `1px solid ${c.dot}30`, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+                          {typeLabels[item.type]}
+                        </span>
                       </div>
-                      <p style={{ fontSize: isSd ? 16 : 14, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{isSd && item.eventSd ? item.eventSd : item.event}</p>
+                      <p style={{ fontSize: isSd ? 16 : 14, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+                        {isSd && item.eventSd ? item.eventSd : item.event}
+                      </p>
                     </div>
                   </div>
                 )
@@ -224,15 +231,21 @@ export default function BiographyPage() {
       <section className="section-sm" style={{ background: 'var(--cream)' }}>
         <div className="container" style={{ maxWidth: 960 }}>
           <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.bio.familyTag, lang)}</div>
-          <h2 className="section-title" style={{ marginBottom: 32 }}>{tx(t.bio.familyH2, lang)}</h2>
+          <h2 className="section-title" style={{ marginBottom: 32, fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', direction: isSd ? 'rtl' : 'ltr', textAlign: isSd ? 'right' : 'left' }}>{tx(t.bio.familyH2, lang)}</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
             {family.map((m, i) => (
-              <div key={i} className="card" style={{ padding: '14px 18px' }}>
-                <p style={{ fontWeight: 700, fontSize: isSd ? 16 : 14, color: 'var(--text-primary)', marginBottom: 2, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 1.8 : 1.3 }}>{m.nameEn}</p>
-                <p style={{ fontSize: isSd ? 13 : 11, color: 'var(--terracotta)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', marginBottom: 6, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+              <div key={i} className="card" style={{ padding: '16px 18px', direction: isSd ? 'rtl' : 'ltr' }}>
+                <p style={{ fontWeight: 700, fontSize: 15, color: 'var(--text-primary)', marginBottom: 2, fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', lineHeight: isSd ? 1.8 : 1.3, textAlign: isSd ? 'right' : 'left' }}>
+                  {isSd && m.nameSd ? m.nameSd : m.nameEn}
+                </p>
+                <p style={{ fontSize: isSd ? 14 : 11, color: 'var(--terracotta)', fontWeight: 600, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.05em', marginBottom: 6, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left' }}>
                   {isSd && m.roleSd ? m.roleSd : m.relation}
                 </p>
-                {m.noteEn && <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.9 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{isSd && m.noteSd ? m.noteSd : m.noteEn}</p>}
+                {(m.noteEn || m.noteSd) && (
+                  <p style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-muted)', lineHeight: isSd ? 1.9 : 1.5, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left' }}>
+                    {isSd && m.noteSd ? m.noteSd : m.noteEn}
+                  </p>
+                )}
               </div>
             ))}
           </div>

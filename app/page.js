@@ -32,7 +32,7 @@ export default function HomePage() {
     <>
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section style={{
-        background: 'linear-gradient(160deg, #FAF6F0 0%, #F0E6D3 50%, #E8D5B7 100%)',
+        background: 'linear-gradient(160deg, #FAF6F0 0%, #F0E6D3 40%, #EAD8BC 100%)',
         position: 'relative', overflow: 'hidden',
       }}>
         <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
@@ -130,8 +130,8 @@ export default function HomePage() {
                   src="/valiram homepage Portrait.png"
                   alt="Vali Ram Vallabh — Portrait"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 45vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
                   priority
                 />
               </div>

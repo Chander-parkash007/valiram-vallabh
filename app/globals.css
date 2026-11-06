@@ -318,7 +318,8 @@ body::before {
 
 /* Text: full-width on mobile with proper padding */
 .hero-text-col {
-  padding: 28px 24px 40px 24px;
+  padding: 32px 24px 40px 24px;
+  order: 2;
 }
 
 /* Tablet and up — side by side */
@@ -346,6 +347,33 @@ body::before {
     justify-content: center;
     background: #EAD8BC;
     overflow: hidden;
+    position: relative;
+  }
+
+  /* Subtle bottom-edge fade so photo blends into the page below */
+  .hero-portrait-col::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent 0%, #EAD8BC 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Left-edge fade so photo blends into the text column */
+  .hero-portrait-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    background: linear-gradient(to right, #EAD8BC 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .hero-portrait-col > div {
@@ -379,10 +407,23 @@ body::before {
 
 /* ── Global mobile improvements ─────────────────────────────── */
 
-/* Smaller section padding on mobile */
+/* Mobile hero — portrait above text */
 @media (max-width: 767px) {
   .section { padding: 56px 0; }
   .section-sm { padding: 36px 0; }
+
+  /* Hero portrait on mobile — show as a tall banner */
+  .hero-portrait-col {
+    width: 100%;
+    height: 380px;
+    order: 1;
+  }
+
+  .hero-text-col {
+    order: 2;
+    padding: 32px 0 48px;
+    text-align: left;
+  }
 
   /* Buttons full-width on very small screens */
   .btn-primary, .btn-outline, .btn-green, .btn-gold {
@@ -396,6 +437,9 @@ body::before {
 
   /* Navbar logo smaller */
   .container { padding: 0 16px; }
+
+  /* Timeline legend items left-aligned on mobile */
+  .timeline-legend { justify-content: flex-start !important; }
 }
 
 @media (min-width: 768px) {
@@ -415,16 +459,13 @@ body::before {
   }
 }
 
-/* Hero buttons — stacked on mobile, side by side on desktop */
+/* Hero buttons — side by side always, no width:100% override */
 .hero-btns {
-  flex-direction: column !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
 }
-@media (min-width: 480px) {
-  .hero-btns {
-    flex-direction: row !important;
-  }
-  .hero-btns .btn-primary,
-  .hero-btns .btn-outline {
-    width: auto !important;
-  }
+.hero-btns .btn-primary,
+.hero-btns .btn-outline {
+  width: auto !important;
+  flex: 0 0 auto;
 }

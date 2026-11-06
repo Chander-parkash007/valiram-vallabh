@@ -637,9 +637,11 @@ export default function PressPage() {
             {/* Title */}
             <div style={{ marginBottom: 16, textAlign: 'center' }}>
               <span style={{ fontSize: 10, padding: '3px 12px', borderRadius: 100, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', background: 'rgba(201,148,58,0.2)', color: '#C9943A', border: '1px solid rgba(201,148,58,0.3)' }}>
-                {lightbox.type} · {lightbox.publication}
+                {lightbox.language} · {lightbox.publication}
               </span>
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 20, color: '#F5ECD7', marginTop: 12, marginBottom: 4, lineHeight: 1.3 }}>{lightbox.titleEn}</h3>
+              <h3 style={{ fontFamily: isSd && lightbox.titleSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd && lightbox.titleSd ? 22 : 20, color: '#F5ECD7', marginTop: 12, marginBottom: 4, lineHeight: isSd && lightbox.titleSd ? 2 : 1.3, direction: isSd && lightbox.titleSd ? 'rtl' : 'ltr' }}>
+                {isSd && lightbox.titleSd ? lightbox.titleSd : lightbox.titleEn}
+              </h3>
               {lightbox.titleSd && (
                 <p style={{ fontFamily: 'Lateef, serif', fontSize: 16, color: '#C9943A', direction: 'rtl', lineHeight: 1.8, marginBottom: 4 }}>{lightbox.titleSd}</p>
               )}
@@ -691,7 +693,9 @@ export default function PressPage() {
 
             {/* Description */}
             <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 12, padding: '20px 24px', marginBottom: 16 }}>
-              <p style={{ fontSize: 14, color: 'rgba(245,236,215,0.75)', lineHeight: 1.8 }}>{lightbox.description}</p>
+              <p style={{ fontSize: isSd ? 16 : 14, color: 'rgba(245,236,215,0.75)', lineHeight: isSd ? 2 : 1.8, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr', textAlign: isSd ? 'right' : 'left' }}>
+                {isSd && lightbox.descriptionSd ? lightbox.descriptionSd : lightbox.description}
+              </p>
             </div>
 
             {/* Navigation */}

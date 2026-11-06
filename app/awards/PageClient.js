@@ -46,7 +46,7 @@ export default function AwardsPage() {
     const yb = parseInt(b.year) || 0
     return yb - ya
   })
-  const featured = awards.filter(a => a.featured)
+  const featured = awards.filter(a => a.featured && a.awardPhoto)
 
   const getName = (a) => (isSd && a.nameAward) ? a.nameAward : a.nameEn
   const getOrg  = (a) => (isSd && a.organisationSd) ? a.organisationSd : a.organisation
