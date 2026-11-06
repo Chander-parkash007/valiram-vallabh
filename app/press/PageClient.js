@@ -436,7 +436,7 @@ export default function PressPage() {
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(44,24,16,0.7) 0%, transparent 50%)', pointerEvents: 'none' }} />
                   <div style={{ position: 'absolute', top: 12, left: 12 }}>
                     <span style={{ fontSize: 10, padding: '3px 10px', borderRadius: 100, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', background: 'rgba(44,24,16,0.75)', color: '#F5ECD7', backdropFilter: 'blur(4px)' }}>
-                      {item.type}
+                      {item.language}
                     </span>
                   </div>
                   <div style={{ position: 'absolute', top: 12, right: 12 }}>
@@ -461,18 +461,15 @@ export default function PressPage() {
                       {item.language}
                     </span>
                     {item.author && (
-                      <span style={{ fontSize: 11, color: 'var(--gold)', fontWeight: 600 }}>{tx(t.press.by, lang)} {item.author}</span>
+                      <span style={{ fontSize: isSd ? 14 : 11, color: 'var(--gold)', fontWeight: 600, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{isSd ? 'قلم:' : tx(t.press.by, lang)} {item.author}</span>
                     )}
                   </div>
                   <h3 style={{ fontFamily: isSd && item.titleSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd && item.titleSd ? 20 : 16, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 6, lineHeight: isSd && item.titleSd ? 2 : 1.35, direction: isSd && item.titleSd ? 'rtl' : 'ltr' }}>
                     {isSd && item.titleSd ? item.titleSd : item.titleEn}
                   </h3>
-                  {isSd && item.titleSd ? null : item.titleSd && (
-                    <p style={{ fontFamily: 'Lateef, serif', fontSize: 13, color: 'var(--terracotta)', direction: 'rtl', textAlign: 'right', marginBottom: 8, lineHeight: 1.8 }}>
-                      {item.titleSd}
-                    </p>
-                  )}
-                  <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, flex: 1, marginBottom: 14, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{isSd && item.descriptionSd ? item.descriptionSd : item.description}</p>
+                  <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, flex: 1, marginBottom: 14, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>
+                    {isSd && item.descriptionSd ? item.descriptionSd : item.description}
+                  </p>
                   <button
                     onClick={() => openLightbox(item)}
                     className="btn-outline"

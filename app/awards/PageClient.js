@@ -90,9 +90,6 @@ export default function AwardsPage() {
                       style={{ objectFit: 'contain', objectPosition: 'center', background: 'var(--cream)' }}
                     />
                     <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(44,24,16,0.3), transparent 60%)', pointerEvents: 'none' }} />
-                    <span className="tag-gold" style={{ position: 'absolute', top: 10, right: 10, backdropFilter: 'blur(4px)', background: 'rgba(201,148,58,0.85)', direction: 'ltr', unicodeBidi: 'isolate' }}>
-                      {a.year}
-                    </span>
                   </div>
                 )}
                 <div style={{ padding: '20px 22px' }}>
@@ -101,7 +98,6 @@ export default function AwardsPage() {
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
                       </svg>
-                      <span className="tag-gold" style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>{a.year}</span>
                     </div>
                   )}
                   <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: isSd ? 20 : 17, fontWeight: 700, color: 'var(--text-primary)', marginBottom: 8, lineHeight: isSd ? 2 : 1.3 }}>

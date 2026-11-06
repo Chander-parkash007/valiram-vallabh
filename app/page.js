@@ -42,8 +42,8 @@ export default function HomePage() {
             <div className="hero-portrait-col">
               <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: 420, background: '#EAD8BC' }}>
                 <Image
-                  src="/gallery/valiram_potrait_1_1_cropped.jpg"
-                  alt="Vali Ram Vallabh — Watercolour Portrait"
+                  src="/valiram_vallabh_homepage_800x900.jpg"
+                  alt="Vali Ram Vallabh — Portrait"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover', objectPosition: 'center top' }}
@@ -53,22 +53,28 @@ export default function HomePage() {
             </div>
 
             {/* Text */}
-            <div className="hero-text-col">
-              <div style={{ direction: 'ltr', textAlign: isSd ? 'right' : 'left' }}>
+            <div className="hero-text-col" style={{ display: 'flex', flexDirection: 'column' }}>
               <div className="tag" style={{ marginBottom: 20, display: 'inline-flex', alignSelf: isSd ? 'flex-end' : 'flex-start' }}>
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--terracotta)', animation: 'pulse 2s infinite', flexShrink: 0 }} />
                 {tx(t.home.tag, lang)}
               </div>
 
-              <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.4rem,5vw,5rem)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1.05, color: 'var(--text-primary)', marginBottom: 14, textAlign: isSd ? 'right' : 'left' }}>
-                <span style={{ background: 'linear-gradient(135deg, var(--terracotta), var(--gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                  {tx(t.home.title1, lang)}<br />{tx(t.home.title2, lang)}
-                </span>
+              <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2.4rem,5vw,5rem)', fontWeight: 800, letterSpacing: isSd ? 0 : '-0.04em', lineHeight: isSd ? 1.4 : 1.05, color: 'var(--text-primary)', marginBottom: 14, textAlign: isSd ? 'right' : 'left', direction: isSd ? 'rtl' : 'ltr' }}>
+                {isSd
+                  ? <span style={{ background: 'linear-gradient(135deg, var(--terracotta), var(--gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                      {tx(t.home.title1, lang)} {tx(t.home.title2, lang)}
+                    </span>
+                  : <span style={{ background: 'linear-gradient(135deg, var(--terracotta), var(--gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                      {tx(t.home.title1, lang)}<br />{tx(t.home.title2, lang)}
+                    </span>
+                }
               </h1>
 
-              <p style={{ fontFamily: 'Lateef, serif', fontSize: 24, color: 'var(--terracotta)', marginBottom: 16, lineHeight: 1.8, direction: 'rtl', textAlign: 'right' }}>
-                ولي رام ولڀ
-              </p>
+              {!isSd && (
+                <p style={{ fontFamily: 'Lateef, serif', fontSize: 22, color: 'var(--terracotta)', marginBottom: 16, lineHeight: 1.8, direction: 'rtl', textAlign: 'right' }}>
+                  ولي رام ولڀ
+                </p>
+              )}
 
               <p style={{ fontSize: 16, color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: 4, fontWeight: 500, textAlign: isSd ? 'right' : 'left' }}>
                 {tx(t.home.bornDied, lang)}
@@ -108,11 +114,10 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div style={{ display: 'flex', gap: 10, flexDirection: 'column' }} className="hero-btns">
+              <div style={{ display: 'flex', gap: 10, flexDirection: isSd ? 'column' : 'column' }} className="hero-btns">
                 <Link href="/biography" className="btn-primary" style={{ justifyContent: 'center', textAlign: 'center' }}>{tx(t.home.btnBio, lang)}</Link>
                 <Link href="/books" className="btn-outline" style={{ justifyContent: 'center', textAlign: 'center' }}>{tx(t.home.btnBooks, lang)}</Link>
               </div>
-            </div>{/* close direction wrapper */}
             </div>{/* close hero-text-col */}
 
           </div>

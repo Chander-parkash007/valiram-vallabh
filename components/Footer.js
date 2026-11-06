@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container" style={{ paddingTop: 60, paddingBottom: 40 }}>
 
         {/* Top grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 40, marginBottom: 48 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 40, marginBottom: 48, direction: 'ltr' }}>
 
           {/* Brand */}
           <div>
@@ -79,20 +79,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div style={{ borderTop: '1px solid rgba(245,236,215,0.1)', paddingTop: 24, display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center' }}>
-          <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.4)' }}>{tx(t.footer.copyright, lang)}</p>
-          <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.4)' }}>{tx(t.footer.tagline, lang)}</p>
+        <div style={{ borderTop: '1px solid rgba(245,236,215,0.1)', paddingTop: 24, display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center', direction: 'ltr' }}>
+          <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.4)', fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{tx(t.footer.copyright, lang)}</p>
+          <p style={{ fontSize: 12, color: 'rgba(245,236,215,0.4)', fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: 'ltr', unicodeBidi: 'embed' }}>{tx(t.footer.tagline, lang)}</p>
         </div>
 
         {/* Developer credit */}
-        <div style={{ borderTop: '1px solid rgba(245,236,215,0.06)', paddingTop: 20, marginTop: 16 }}>
+        <div style={{ borderTop: '1px solid rgba(245,236,215,0.06)', paddingTop: 20, marginTop: 16, direction: 'ltr' }}>
           <p style={{ fontSize: 11, color: 'rgba(245,236,215,0.35)', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>
             {tx(t.footer.devBy, lang)}
           </p>
           <p style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: 'rgba(245,236,215,0.75)', fontWeight: 700, marginBottom: 8 }}>
             Chander Parkash
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, direction: 'ltr' }}>
             <a href="https://www.linkedin.com/in/chander-parkash" target="_blank" rel="noopener noreferrer"
               style={{ fontSize: 13, color: 'rgba(201,148,58,0.7)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5 }}
               onMouseEnter={e => e.currentTarget.style.color = '#C9943A'}

@@ -34,7 +34,7 @@ export default function ContactPage() {
           <h1 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(2rem,5vw,3.5rem)', fontWeight: 800, color: '#F5ECD7', marginBottom: 12, letterSpacing: isSd ? 0 : '-0.03em' }}>
             {tx(t.contact.title, lang)}
           </h1>
-          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 520, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6 }}>
+          <p style={{ fontSize: isSd ? 20 : 16, color: 'rgba(245,236,215,0.75)', maxWidth: 520, fontFamily: isSd ? 'Lateef, serif' : 'inherit', lineHeight: isSd ? 2.1 : 1.6, direction: isSd ? 'rtl' : 'ltr' }}>
             {tx(t.contact.desc, lang)}
           </p>
         </div>
@@ -43,10 +43,10 @@ export default function ContactPage() {
       {/* Memory banner */}
       <section style={{ background: 'var(--cream)', padding: '48px 0', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(1.5rem,3vw,2.2rem)', color: 'var(--text-primary)', marginBottom: 16 }}>
+          <h2 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 'clamp(1.5rem,3vw,2.2rem)', color: 'var(--text-primary)', marginBottom: 16, direction: isSd ? 'rtl' : 'ltr' }}>
             {tx(t.contact.memoryH2, lang)}
           </h2>
-          <p style={{ fontSize: isSd ? 18 : 16, color: 'var(--text-secondary)', lineHeight: isSd ? 2.1 : 1.8, maxWidth: 640, margin: '0 auto', fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>
+          <p style={{ fontSize: isSd ? 18 : 16, color: 'var(--text-secondary)', lineHeight: isSd ? 2.1 : 1.8, maxWidth: 640, margin: '0 auto', fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr', textAlign: isSd ? 'right' : 'center' }}>
             {isSd
               ? 'پڙهندڙ، شاگرد، ساٿي، پاڙيسري يا دوست طور — جيڪڏهن سندس ترجمن توهان جي زندگي بدلائي، جيڪڏهن سندس تعليم توهان جي سوچ کي شڪل ڏني، جيڪڏهن توهان سندس سان گڏ هڪ لمحو گذاريو — اسان توهان کان ٻڌڻ چاهيون ٿا.'
               : 'As a reader, student, colleague, neighbour or friend — if his translations changed your life, if his teaching shaped your thinking, if you shared a moment with him — we would love to hear from you.'
@@ -58,13 +58,18 @@ export default function ContactPage() {
       {/* Main */}
       <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 48 }}>
+          {/* Always LTR grid to keep columns in correct order */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 48, direction: 'ltr' }}>
 
             {/* Form */}
             <div>
               <div className="tag" style={{ marginBottom: 16, display: 'inline-flex' }}>{tx(t.contact.sendTag, lang)}</div>
-              <h2 className="section-title" style={{ marginBottom: 8, fontSize: 26 }}>{tx(t.contact.sendH2, lang)}</h2>
-              <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 28 }}>{tx(t.contact.sendDesc, lang)}</p>
+              <h2 className="section-title" style={{ marginBottom: 8, fontSize: 26, fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', direction: isSd ? 'rtl' : 'ltr', textAlign: isSd ? 'right' : 'left' }}>
+                {tx(t.contact.sendH2, lang)}
+              </h2>
+              <p style={{ fontSize: isSd ? 16 : 14, color: 'var(--text-muted)', marginBottom: 28, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr', lineHeight: isSd ? 1.9 : 1.5 }}>
+                {tx(t.contact.sendDesc, lang)}
+              </p>
 
               {status === 'sent' ? (
                 <div style={{ background: 'rgba(45,90,61,0.08)', border: '1px solid rgba(45,90,61,0.2)', borderRadius: 16, padding: '32px', textAlign: 'center' }}>
@@ -73,15 +78,15 @@ export default function ContactPage() {
                       <polyline points="20,6 9,17 4,12"/>
                     </svg>
                   </div>
-                  <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: 20, color: 'var(--text-primary)', marginBottom: 8 }}>{tx(t.contact.sentTitle, lang)}</h3>
-                  <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 20 }}>{tx(t.contact.sentDesc, lang)}</p>
+                  <h3 style={{ fontFamily: isSd ? 'Lateef, serif' : 'Playfair Display, serif', fontSize: 20, color: 'var(--text-primary)', marginBottom: 8 }}>{tx(t.contact.sentTitle, lang)}</h3>
+                  <p style={{ fontSize: isSd ? 16 : 14, color: 'var(--text-muted)', marginBottom: 20, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{tx(t.contact.sentDesc, lang)}</p>
                   <button onClick={() => setStatus('idle')} className="btn-outline" style={{ fontSize: 13 }}>{tx(t.contact.sendAnother, lang)}</button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {formFields.map(f => (
                     <div key={f.key}>
-                      <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                      <label style={{ display: 'block', fontSize: isSd ? 14 : 12, fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 6, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left', direction: isSd ? 'rtl' : 'ltr', display: 'block' }}>
                         {f.label}{f.required && ' *'}
                       </label>
                       <input
@@ -90,14 +95,14 @@ export default function ContactPage() {
                         required={f.required}
                         value={form[f.key]}
                         onChange={e => setForm(p => ({ ...p, [f.key]: e.target.value }))}
-                        style={{ width: '100%', padding: '12px 14px', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 14, color: 'var(--text-primary)', outline: 'none', fontFamily: 'Inter, sans-serif' }}
+                        style={{ width: '100%', padding: '12px 14px', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 14, color: 'var(--text-primary)', outline: 'none', fontFamily: 'Inter, sans-serif', direction: 'ltr', textAlign: 'left' }}
                         onFocus={e => e.target.style.borderColor = 'var(--terracotta)'}
                         onBlur={e => e.target.style.borderColor = 'var(--border)'}
                       />
                     </div>
                   ))}
                   <div>
-                    <label style={{ display: 'block', fontSize: 12, fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    <label style={{ fontSize: isSd ? 14 : 12, fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 6, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left', direction: isSd ? 'rtl' : 'ltr', display: 'block' }}>
                       {tx(t.contact.msgLabel, lang)} *
                     </label>
                     <textarea
@@ -105,7 +110,7 @@ export default function ContactPage() {
                       required rows={5}
                       value={form.message}
                       onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
-                      style={{ width: '100%', padding: '12px 14px', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 14, color: 'var(--text-primary)', outline: 'none', fontFamily: 'Inter, sans-serif', resize: 'vertical', minHeight: 120 }}
+                      style={{ width: '100%', padding: '12px 14px', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 10, fontSize: 14, color: 'var(--text-primary)', outline: 'none', fontFamily: 'Inter, sans-serif', resize: 'vertical', minHeight: 120, direction: 'ltr', textAlign: 'left' }}
                       onFocus={e => e.target.style.borderColor = 'var(--terracotta)'}
                       onBlur={e => e.target.style.borderColor = 'var(--border)'}
                     />
@@ -148,7 +153,7 @@ export default function ContactPage() {
                     },
                   ].map((c, i) => (
                     <a key={i} href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
-                      style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 16px', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 12, textDecoration: 'none', transition: 'all 0.2s' }}
+                      style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 16px', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 12, textDecoration: 'none', transition: 'all 0.2s', direction: 'ltr' }}
                       onMouseEnter={e => { e.currentTarget.style.borderColor = c.color; e.currentTarget.style.transform = 'translateY(-1px)' }}
                       onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'none' }}
                     >
@@ -156,8 +161,8 @@ export default function ContactPage() {
                         {c.icon}
                       </div>
                       <div>
-                        <p style={{ fontSize: 10, color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 2 }}>{c.label}</p>
-                        <p style={{ fontSize: 13, color: 'var(--text-primary)', fontWeight: 600 }}>{c.value}</p>
+                        <p style={{ fontSize: isSd ? 13 : 10, color: 'var(--text-muted)', fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', marginBottom: 2, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{c.label}</p>
+                        <p style={{ fontSize: 13, color: 'var(--text-primary)', fontWeight: 600, direction: 'ltr' }}>{c.value}</p>
                       </div>
                     </a>
                   ))}
@@ -171,15 +176,15 @@ export default function ContactPage() {
                   {[
                     { name: 'Dr. Kamleshwer Lohana', role: isSd ? 'پٽ' : 'Son', note: isSd ? 'ايسوسيئيٽ پروفيسر، مهران يونيورسٽي' : 'Associate Professor, Mehran University' },
                     { name: 'Dr. Pushpa Vallabh',    role: isSd ? 'ڌيءَ' : 'Daughter', note: isSd ? 'ايسوسيئيٽ پروفيسر، ڊائو ميڊيڪل يونيورسٽي' : 'Associate Professor, Dow Medical University' },
-                    { name: 'Gauri Vallabh',         role: isSd ? 'ڌيءَ' : 'Daughter', note: isSd ? 'اسسٽنٽ پروفيسر، گورنمينٽ ويمنس ڪاليج' : "Asst. Professor, Govt Women's College, Karachi" },
+                    { name: 'Gauri Vallabh',         role: isSd ? 'ڌيءَ' : 'Daughter', note: isSd ? 'اسسٽنٽ پروفيسر، گورنمينٽ ويمنس ڪاليج، ڪراچي' : "Asst. Professor, Govt Women's College, Karachi" },
                   ].map((f, i) => (
-                    <div key={i} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 12, padding: '14px 16px' }}>
+                    <div key={i} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 12, padding: '14px 16px', direction: 'ltr' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 4 }}>
                         <div>
                           <p style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)', marginBottom: 2 }}>{f.name}</p>
-                          <p style={{ fontSize: 11, color: 'var(--text-muted)' }}>{f.note}</p>
+                          <p style={{ fontSize: isSd ? 14 : 11, color: 'var(--text-muted)', fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{f.note}</p>
                         </div>
-                        <span className="tag" style={{ fontSize: 9 }}>{f.role}</span>
+                        <span className="tag" style={{ fontSize: isSd ? 13 : 9, fontFamily: isSd ? 'Lateef, serif' : 'inherit' }}>{f.role}</span>
                       </div>
                     </div>
                   ))}
@@ -188,16 +193,18 @@ export default function ContactPage() {
 
               {/* Location */}
               <div style={{ background: 'var(--cream)', border: '1px solid var(--border)', borderRadius: 12, padding: '20px' }}>
-                <p style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text-muted)', marginBottom: 12 }}>{tx(t.contact.locationTag, lang)}</p>
+                <p style={{ fontSize: isSd ? 14 : 10, fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.08em', color: 'var(--text-muted)', marginBottom: 12, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left', direction: isSd ? 'rtl' : 'ltr' }}>
+                  {tx(t.contact.locationTag, lang)}
+                </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {[
                     { label: tx(t.contact.birthplace, lang), value: isSd ? 'مٺي، ٿرپارڪر، سنڌ، پاڪستان' : 'Mithi, Tharparkar, Sindh, Pakistan' },
                     { label: tx(t.contact.residence, lang),  value: isSd ? 'شريف اسڪوائر، حسين آباد، حيدرآباد' : 'Sharif Square, Hussainabad, Hyderabad, Sindh' },
                     { label: tx(t.contact.museum, lang),     value: isSd ? 'سنڌ ميوزيم، حيدرآباد، سنڌ' : 'Sindh Museum, Hyderabad, Sindh' },
                   ].map(l => (
-                    <div key={l.label} style={{ display: 'flex', gap: 8 }}>
-                      <span style={{ fontSize: 11, color: 'var(--terracotta)', fontWeight: 700, minWidth: 100, flexShrink: 0 }}>{l.label}</span>
-                      <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{l.value}</span>
+                    <div key={l.label} style={{ display: 'flex', gap: 8, direction: 'ltr' }}>
+                      <span style={{ fontSize: isSd ? 14 : 11, color: 'var(--terracotta)', fontWeight: 700, minWidth: 100, flexShrink: 0, fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{l.label}</span>
+                      <span style={{ fontSize: isSd ? 14 : 12, color: 'var(--text-secondary)', fontFamily: isSd ? 'Lateef, serif' : 'inherit', direction: isSd ? 'rtl' : 'ltr' }}>{l.value}</span>
                     </div>
                   ))}
                 </div>

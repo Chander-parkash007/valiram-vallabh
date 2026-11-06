@@ -36,6 +36,7 @@ function BookModal({ book, onClose, isSd, lang }) {
         background: 'var(--bg-card)', borderRadius: 20, padding: '32px',
         maxWidth: 680, width: '100%', maxHeight: '90vh', overflowY: 'auto',
         border: '1px solid var(--border)', boxShadow: '0 32px 80px rgba(44,24,16,0.4)',
+        direction: isSd ? 'rtl' : 'ltr',
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
           <div>
@@ -53,16 +54,18 @@ function BookModal({ book, onClose, isSd, lang }) {
           {[
             { label: tx(t.books.modalAuthor, lang), value: book.originalAuthor && book.originalAuthor !== 'Vali Ram Vallabh' ? `${book.originalAuthor} → ${isSd ? 'ترجمو: ولي رام ولڀ' : 'Translated by Vali Ram Vallabh'}` : 'Vali Ram Vallabh' },
             { label: tx(t.books.modalPub, lang), value: book.publisher },
-            { label: tx(t.books.modalYear, lang), value: String(book.year) },
+            { label: tx(t.books.modalYear, lang), value: book.year ? String(book.year) : (isSd ? 'دستياب ناهي' : 'N/A') },
             { label: tx(t.books.modalLang, lang), value: book.originalLanguage || 'Sindhi' },
           ].map(f => (
             <div key={f.label} style={{ background: 'var(--cream)', borderRadius: 10, padding: '12px 14px' }}>
-              <p style={{ fontSize: 10, color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 4 }}>{f.label}</p>
-              <p style={{ fontSize: 13, color: 'var(--text-primary)', fontWeight: 500 }}>{f.value}</p>
+              <p style={{ fontSize: isSd ? 13 : 10, color: 'var(--text-muted)', fontWeight: 700, textTransform: isSd ? 'none' : 'uppercase', letterSpacing: isSd ? 0 : '0.06em', marginBottom: 4, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left' }}>{f.label}</p>
+              <p style={{ fontSize: isSd ? 15 : 13, color: 'var(--text-primary)', fontWeight: 500, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left', direction: isSd ? 'rtl' : 'ltr', lineHeight: isSd ? 1.9 : 1.4 }}>{f.value}</p>
             </div>
           ))}
         </div>
-        <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>{book.description}</p>
+        <p style={{ fontSize: isSd ? 16 : 14, color: 'var(--text-secondary)', lineHeight: isSd ? 2 : 1.7, marginBottom: 24, fontFamily: isSd ? 'Lateef, serif' : 'inherit', textAlign: isSd ? 'right' : 'left', direction: isSd ? 'rtl' : 'ltr' }}>
+          {isSd && book.descriptionSd ? book.descriptionSd : book.description}
+        </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           <a href={viewUrl} target="_blank" rel="noopener noreferrer" className="btn-green" style={{ flex: 1, justifyContent: 'center' }}>
             {isSd ? 'آنلائن پڙهو' : 'Read Online'}
