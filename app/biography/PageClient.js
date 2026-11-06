@@ -196,18 +196,24 @@ export default function BiographyPage() {
             ))}
           </div>
           <div style={{ position: 'relative' }}>
-            {/* Vertical line — ALWAYS on the left at 40px */}
-            <div style={{ position: 'absolute', left: 40, top: 0, bottom: 0, width: 2, background: 'var(--border)' }} />
+            {/* Line: right side in Sindhi, left side in English — always at 40px from its edge */}
+            <div style={{
+              position: 'absolute',
+              ...(isSd ? { right: 40 } : { left: 40 }),
+              top: 0, bottom: 0, width: 2,
+              background: 'var(--border)',
+            }} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {timeline.map((item, i) => {
                 const c = typeColors[item.type]
                 return (
-                  <div key={i} style={{ display: 'flex', flexDirection: 'row', gap: 20, paddingBottom: 28 }}>
-                    {/* Dot — always left, centered in 80px column which sits over the line */}
+                  /* row-reverse in Sindhi: dot column goes to the RIGHT */
+                  <div key={i} style={{ display: 'flex', flexDirection: isSd ? 'row-reverse' : 'row', gap: 20, paddingBottom: 28 }}>
+                    {/* Dot — 80px column, dot centered → sits exactly on the line */}
                     <div style={{ flexShrink: 0, width: 80, display: 'flex', justifyContent: 'center', paddingTop: 6, position: 'relative', zIndex: 1 }}>
                       <div style={{ width: 12, height: 12, borderRadius: '50%', background: c.dot, border: '2px solid var(--bg)', boxShadow: `0 0 0 2px ${c.dot}` }} />
                     </div>
-                    {/* Content — text direction and alignment flip based on language */}
+                    {/* Content card — text aligns right in Sindhi, left in English */}
                     <div style={{ flex: 1, background: c.bg, border: `1px solid ${c.dot}20`, borderRadius: 10, padding: '12px 16px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6, flexWrap: 'wrap', justifyContent: isSd ? 'flex-end' : 'flex-start', direction: 'ltr' }}>
                         {!isSd && <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, fontWeight: 800, color: c.dot }}>{item.year}</span>}
