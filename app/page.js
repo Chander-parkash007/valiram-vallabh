@@ -127,11 +127,11 @@ export default function HomePage() {
             <div className="hero-portrait-col">
               <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: 420, background: '#EAD8BC' }}>
                 <Image
-                  src="/valiram homepage Portrait.png"
+                  src="/valiram potrail without bg/bg less potrait.png"
                   alt="Vali Ram Vallabh — Portrait"
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
+                  style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
                   priority
                 />
               </div>
